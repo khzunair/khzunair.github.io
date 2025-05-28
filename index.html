@@ -1,119 +1,882 @@
 <!DOCTYPE html>
-<html data-bs-theme="light">
-
+<html lang="en" data-bs-theme="light">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home |Zunair Khawaja</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Cards-icons.css">
-    <link rel="stylesheet" href="assets/css/pikaday.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zunair Khawaja | Portfolio</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" />
+  <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+  <link rel="stylesheet" href="assets/fonts/material-icons.min.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-..."
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<!-- Add this in your <head> or before </body> -->
+<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+
+
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  crossorigin="anonymous"
+/>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .nav-link {
+      cursor: pointer;
+    }
+        body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.7;
+    }
+
+        body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.7;
+    }
+
+    h2 {
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    h4 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+      /* Base card style */
+    .custom-card {
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      color: #333;
+      background: #fff;
+    }
+    /* Hover effect for all cards */
+    .custom-card:hover {
+      background: #7765e3;
+      color: #fff !important;
+      box-shadow: 0 10px 20px rgba(119, 101, 227, 0.5);
+      transform: translateY(-8px);
+    }
+    /* Change icon color on hover */
+    .custom-card:hover i {
+      color: #fff !important;
+    }
+
+    /* Highlighted middle column card */
+    .custom-card-highlight {
+      border-radius: 15px;
+      background: linear-gradient(135deg, #5a43d7, #7765e3);
+      cursor: default;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(90, 67, 215, 0.6);
+      transition: all 0.4s ease;
+    }
+    .custom-card-highlight:hover {
+      background: linear-gradient(135deg, #7765e3, #5a43d7);
+      box-shadow: 0 15px 35px rgba(119, 101, 227, 0.7);
+      transform: translateY(-10px);
+    }
+
+    /* Responsive tweak: center text on small devices */
+    @media (max-width: 767px) {
+      .custom-card {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    .text-muted {
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .section-heading {
+      margin-bottom: 3rem;
+    }
+
+    .contact-section .card {
+      background: #ffffff;
+    }
+
+    @media (max-width: 576px) {
+      .section-heading {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+    }
+
+    .nav-link {
+    transition: all 0.2s ease-in-out;
+  }
+  .nav-link:hover {
+    color: #0d6efd !important;
+    transform: scale(1.05);
+  }
+
+    .btn-purple {
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: #0ea0ff;
+  text-decoration: none;
+  color: white;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+ .logo-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #0ea0ff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+  }
+
+  .logo-text:hover {
+    color: #6610f2;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+     .skill-icon {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .skill-icon:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+  }
+
+  .skill-icon i {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .skill-icon p {
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+
+  .skill-icon {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .skill-icon:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+  }
+
+  .skill-icon i, .skill-icon img, .skill-icon span {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .skill-icon p {
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+
+   .carousel-item {
+    transition: transform 0.6s ease-in-out;
+  }
+  .card img {
+    object-fit: cover;
+    height: 200px;
+  }
+  .card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  </style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark">
-        <div class="container"><a class="navbar-brand logo" href="/">Zunair Khawaja</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/" style="margin-bottom: 1px;" target="_blank">Free Consultancy!</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main class="page lanidng-page">
-        <section class="portfolio-block block-intro" style="padding-top: 27px;">
-            <div class="avatar" style="background-image: url(&quot;assets/img/avatars/zunair.png&quot;);"></div>
-            <div class="container">
-                <div class="about-me">
-                    <p>hey! I am <strong>Zunair Khawaja</strong>. I work as Web developer &amp; Digital Marketing expert. I have passion for helping people grow&nbsp;<strong>businesses online.</strong></p><a class="btn btn-outline-primary" role="button" href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/" target="_blank">Let's Connect!</a>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio-block photography">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-6 col-lg-6 item zoom-on-hover"><a href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/"><img class="img-fluid image" src="assets/img/nature/LinkedIn%20Profile.png"></a></div>
-                    <div class="col-md-6 col-lg-6 item zoom-on-hover"><a href="https://github.com/khzunair"><img class="img-fluid image" src="assets/img/nature/github.png"></a></div>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio-block call-to-action border-bottom">
-            <div class="container">
-                <div class="d-flex justify-content-center align-items-center content">
-                    <h3>Want to grow your online presence?</h3><button class="btn btn-outline-primary btn-lg" type="button">Connect with Zunair</button>
-                </div>
-            </div>
-        </section>
-    </main>
-    <section class="portfolio-block website gradient">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-12 col-lg-5 offset-lg-1 text">
-                    <h3>What are the 8 Major Advantages Of Online Business?</h3>
-                    <p>Low overhead costs<br>Wider reach<br>Easy to set up<br>Increased convenience for customers<br> Increased sales<br>Better data tracking<br> Improved customer service<br>Flexibility<br><br></p>
-                </div>
-                <div class="col-md-12 col-lg-5">
-                    <div class="portfolio-laptop-mockup">
-                        <div class="screen">
-                            <div class="screen-content" style="background-image:url(&quot;assets/img/tech/image6.png&quot;);"></div>
-                        </div>
-                        <div class="keyboard"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="page-footer py-3 border-top">
-        <div class="container py-4 py-xl-5">
-            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                <div class="col">
-                    <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
-                        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon lg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cloud">
-                                <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"></path>
-                            </svg></div>
-                        <div class="px-3">
-                            <h4>Software Development</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
-                        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon lg"><i class="material-icons">personal_video</i></div>
-                        <div class="px-3">
-                            <h4>Business Development</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-center d-flex flex-column align-items-center align-items-xl-center">
-                        <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon lg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-flag">
-                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
-                            </svg></div>
-                        <div class="px-3">
-                            <h4>Digital Marketing</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container my-4">
-            <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="projects-grid-cards.html">Projects</a></div>
-            <div class="social-icons" style="padding-bottom: 0px;"><a class="me-3" href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3" target="_blank"><i class="icon ion-social-linkedin" style="font-size: 25px;"></i></a><a class="me-3" href="https://github.com/khzunair" target="_blank"><i class="icon ion-social-github"></i></a><a class="me-3" href="https://www.instagram.com/zunair.khawajaa/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
-                    </svg></a><a class="me-3" href="https://api.whatsapp.com/send/?phone=923324543705&amp;text&amp;type=phone_number&amp;app_absent=0" style="margin-top: -4px;margin-bottom: -7px;margin-left: 5px;" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-whatsapp" style="font-size: 26px;">
-                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-                    </svg></a></div>
-        </div>
-    </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
-</body>
 
-</html>
+    <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4 logo-text" href="#">Zunair</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#hero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#about">About</a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link px-3" href="#what-i-do">What I do?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a
+            class="btn btn-primary btn-sm px-3 py-2 shadow-sm"
+            href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/"
+            target="_blank"
+          >
+            Let's Connect <i class="fab fa-linkedin ms-1"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="hero" class="d-flex align-items-center text-center" style="min-height: 100vh; padding-top: 100px; background: #f8f9fa;">
+  <div class="container">
+    <div class="mb-4">
+      <div
+        class="rounded-circle mx-auto shadow"
+        style="
+          width: 160px;
+          height: 160px;
+          background-image: url('assets/img/avatars/zunair.jpeg');
+          background-size: cover;
+          background-position: center;
+          transition: transform 0.3s ease;
+        "
+        onmouseover="this.style.transform='scale(1.05)';"
+        onmouseout="this.style.transform='scale(1)';"
+      ></div>
+    </div>
+    <h1 class="fw-bold display-4">Hey! I'm <span style="color:#0d6efd;">Zunair Khawaja</span></h1>
+    <p class="lead mt-3 mx-auto" style="max-width: 600px; font-size: 1.25rem; color: #333;">
+      Passionate Full Stack Software Developer 🚀 specialized in Backend & API Development. Experienced in building scalable Web & Mobile applications with JavaScript, React, Node.js, and Express.
+    </p>
+    <p class="lead mt-2 mx-auto" style="max-width: 650px; font-size: 1.1rem; color: #555;">
+      Skilled in AI/ML/DL model training, integrating third-party services, and designing microservices architecture for high-performance distributed systems.
+    </p>
+    <div class="mt-4">
+      <a
+        class="btn btn-primary btn-lg me-3"
+        href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/"
+        target="_blank"
+        ><i class="fab fa-linkedin me-2"></i>LinkedIn</a
+      >
+      <a
+        class="btn btn-dark btn-lg"
+        href="https://github.com/khzunair"
+        target="_blank"
+        ><i class="fab fa-github me-2"></i>GitHub</a
+      >
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-5" style="font-family: 'Poppins', sans-serif;">About Me</h2>
+      <!-- <p class="text-muted fs-5">Get to know me better</p> -->
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-5 text-center mb-4 mb-md-0">
+        <img src="assets/img/avatars/graduation.png" alt="Zunair Khawaja" class="rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover; border: 5px solid #007bff;">
+      </div>
+      <div class="col-md-7">
+        <ul class="list-unstyled fs-5 text-secondary" style="line-height: 1.8;">
+          <li class="mb-3">
+            <i class="bi bi-code-slash fs-4 text-primary me-2"></i>
+            Fresh graduate passionate about crafting <strong>elegant, scalable software solutions</strong> that solve real-world challenges.
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-laptop fs-4 text-primary me-2"></i>
+            Skilled in <strong>Full Stack Development</strong>, specializing in backend APIs, microservices, and responsive front-end interfaces.
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-robot fs-4 text-primary me-2"></i>
+            Enthusiastic about emerging technologies: <strong>AI, Machine Learning, Deep Learning model training</strong>, and seamless third-party integrations.
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-people fs-4 text-primary me-2"></i>
+            Strong team player and quick learner, dedicated to continuous growth and impactful contributions in dynamic environments.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Make sure to include Bootstrap Icons CSS in your <head> for the icons to work -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+<section id="what-i-do" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif;">
+        What I Do? <span role="img" aria-label="coder">👨‍💻</span>
+      </h2>
+      <hr style="width: 60px; height: 3px; background: linear-gradient(90deg, #7765e3, #5a43d7); border: none; margin: 0 auto; border-radius: 5px;">
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- LEFT COLUMN -->
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm custom-card">
+          <i class="bi bi-layout-text-window-reverse text-primary fs-4 me-3"></i>
+          Prepare variety of different designs, layouts and websites
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-exclamation-triangle-fill text-primary fs-4 me-3"></i>
+          Identify issues, analyze information, and provide solutions
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-code-slash text-primary fs-4 me-3"></i>
+          Front-end development using WordPress, Hubspot, and other software
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-speedometer2 text-primary fs-4 me-3"></i>
+          Multi-task across roles to meet deadlines effectively
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-search text-primary fs-4 me-3"></i>
+          Employ SEO tactics to increase audience reach
+        </div>
+      </div>
+
+      <!-- MIDDLE COLUMN (highlighted) -->
+      <div class="col-md-4">
+        <div class="card p-4 shadow-lg text-white bg-gradient-primary fw-bold custom-card-highlight">
+          <i class="bi bi-headset fs-4 me-3"></i>
+          Actively listen to customers' requests, ensuring full understanding before addressing concerns
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-bootstrap-reboot text-primary fs-4 me-3"></i>
+          Convert graphic designs to usable web images using React JS
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-browser-safari text-primary fs-4 me-3"></i>
+          Ensure presentation consistency across Chrome, Safari, Firefox
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-code-square text-primary fs-4 me-3"></i>
+          Code websites using HTML, CSS, JavaScript and jQuery
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-tools text-primary fs-4 me-3"></i>
+          Develop technical solutions for user-facing assets
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm custom-card">
+          <i class="bi bi-bar-chart-line-fill text-primary fs-4 me-3"></i>
+          Use SEO optimization and tools to grow business
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-layout-text-sidebar-reverse text-primary fs-4 me-3"></i>
+          Plan website development using HTML, AJAX, JSON, JS
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-brush text-primary fs-4 me-3"></i>
+          Convert graphic designs to usable web images using Photoshop
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-google text-primary fs-4 me-3"></i>
+          Implement Google-based SEO and ad campaigns
+        </div>
+        <div class="card p-4 shadow-sm custom-card mt-4">
+          <i class="bi bi-check2-square text-primary fs-4 me-3"></i>
+          Conduct unit testing throughout the web development lifecycle
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-5 fw-bold">Skills <span role="img" aria-label="fire">🔥</span></h2>
+    <div class="row justify-content-center g-4">
+
+      <!-- REACT -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">React</p>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">JavaScript</p>
+      </div>
+
+      <!-- Next.js -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-nextjs-original-wordmark" style="font-size: 3rem;"></i>
+        <p class="mt-2">Next.js</p>
+      </div>
+
+      <!-- Redux -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-redux-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">Redux</p>
+      </div>
+
+      <!-- Node.js -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-nodejs-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">Node.js</p>
+      </div>
+
+      <!-- Express -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-express-original" style="font-size: 3rem;"></i>
+        <p class="mt-2">Express</p>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-mongodb-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">MongoDB</p>
+      </div>
+
+      <!-- SQL -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">SQL</p>
+      </div>
+
+      <!-- HTML -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">HTML5</p>
+      </div>
+
+      <!-- CSS -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">CSS3</p>
+      </div>
+
+      <!-- Git -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-git-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">Git</p>
+      </div>
+
+      <!-- API -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-fastapi-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">APIs</p>
+      </div>
+
+      <!-- Material UI (no devicon, using MUI logo) -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <img src="https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" alt="Material UI" style="height: 3rem;" />
+        <p class="mt-2">Material UI</p>
+      </div>
+
+      <!-- React Native -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2">React Native</p>
+      </div>
+
+<!-- 
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <img src="https://seeklogo.com/images/E/expo-go-logo-01BB2BCFC8-seeklogo.com.png" alt="Expo" style="height: 3rem;" />
+        <p class="mt-2">Expo</p>
+      </div> -->
+
+      <!-- AI / Machine Learning Section -->
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <span style="font-size: 3rem;">🧠</span>
+        <p class="mt-2">Machine Learning</p>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <span style="font-size: 3rem;">🤖</span>
+        <p class="mt-2">Deep Learning</p>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <span style="font-size: 3rem;">📷</span>
+        <p class="mt-2">Computer Vision</p>
+      </div>
+
+      <!-- <div class="col-4 col-sm-3 col-md-2 skill-icon">
+        <span style="font-size: 3rem;">🎯</span>
+        <p class="mt-2">YOLO Model</p>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section class="experience-section py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-5">Experience 💼</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card mb-4 p-4 shadow">
+          <h4>Software Developer – Imam Organization</h4>
+          <p class="text-muted">Nov 2024 – Jan 2025 | Remote (UK)</p>
+          <ul class="text-start">
+            <li>Built a complete Madrassa Management System with authentication and role-based access.</li>
+            <li>Integrated AWS S3 and Cloudinary for scalable media storage.</li>
+            <li>Developed online testing, grading, and examination systems.</li>
+          </ul>
+        </div>
+        <div class="card mb-4 p-4 shadow">
+          <h4>Software Developer Intern – NextGen Cure</h4>
+          <p class="text-muted">Nov 2023 – Apr 2024 | Business Incubation Center, UOG</p>
+          <ul class="text-start">
+            <li>Developed React Native UI screens with Redux for state management.</li>
+            <li>Built REST APIs with Node.js; ensured frontend-backend communication.</li>
+            <li>Performed code reviews and collaborated with cross-functional teams.</li>
+          </ul>
+        </div>
+        <div class="card mb-4 p-4 shadow">
+          <h4>Freelance Software Developer – MedEdPort</h4>
+          <p class="text-muted">Sep 2023 – Dec 2024 | Remote (USA)</p>
+          <ul class="text-start">
+            <li>Developed a real-time content streaming portal using MERN stack.</li>
+            <li>Handled CI/CD pipelines and optimized media architecture.</li>
+            <li>Led full SDLC from planning to deployment.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-5">Projects 💻</h2>
+
+    <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <!-- Slides -->
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <!-- Planteria Card -->
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 shadow p-2">
+                <img src="https://via.placeholder.com/600x300?text=Planteria+App" class="card-img-top" alt="Planteria App" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <h4 class="card-title">Planteria – AI-Powered Plant Disease Detection</h4>
+                  <p class="card-text">Mobile app for disease detection and marketplace.</p>
+                  <ul class="text-start small">
+                    <li>Tech Stack: React Native, Flask, Node.js, MongoDB</li>
+                    <li>AI detection, product recommendations, eCommerce</li>
+                    <li>Integrated AI model and backend</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- HireFlow Card -->
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 shadow p-2">
+                <img src="https://via.placeholder.com/600x300?text=HireFlow+App" class="card-img-top" alt="HireFlow App" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <h4 class="card-title">HireFlow – AI-Based Resume Filtration System</h4>
+                  <p class="card-text">Built during Google Developer Hackathon</p>
+                  <ul class="text-start small">
+                    <li>Tech Stack: React, Flask, Node.js, RAG</li>
+                    <li>Filtered resumes using NLP and RAG</li>
+                    <li>Smart shortlisting with job relevance scoring</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Video Streaming">
+                <div class="card-body">
+                  <h5>Video Streaming Platforms</h5>
+                  <p>Seamless streaming with powerful backend capabilities.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="News App">
+                <div class="card-body">
+                  <h5>News Application</h5>
+                  <p>Real-time trusted news feed using top providers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Mededport">
+                <div class="card-body">
+                  <h5>Medical Professionals Portal</h5>
+                  <p>Secure, private portal for verified doctors & students.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Netflix Clone">
+                <div class="card-body">
+                  <h5>Netflix Clone</h5>
+                  <p>UI clone of the popular video streaming platform.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Convo-Panda">
+                <div class="card-body">
+                  <h5>Convo-Panda</h5>
+                  <p>Real-time social chat with friend features.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Dashboard">
+                <div class="card-body">
+                  <h5>Analytical Dashboard</h5>
+                  <p>Track and analyze business performance efficiently.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Login System">
+                <div class="card-body">
+                  <h5>Secure Login System</h5>
+                  <p>JWT & advanced encryption-based authentication system.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Billing System">
+                <div class="card-body">
+                  <h5>Automated Billing System</h5>
+                  <p>Inventory and customer billing management platform.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow p-3">
+                <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="AI Prediction">
+                <div class="card-body">
+                  <h5>AI-based Predictions</h5>
+                  <p>Smart predictions using trained ML models for real data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls + Indicators Below -->
+      <div class="d-flex flex-column align-items-center mt-4">
+        <div class="carousel-indicators mb-3">
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div>
+          <button class="carousel-control-prev me-2" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Volunteer & Leadership Section -->
+<section class="volunteer-section py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-5">Volunteer & Leadership</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card p-4 mb-4 shadow">
+          <h4>General Secretary – Hayatian Computing Society</h4>
+          <p class="text-muted">University of Gujrat | 2024 – 2025</p>
+          <ul class="text-start">
+            <li>Organized programming competitions, FYP exhibitions, and seminars.</li>
+            <li>Led logistics, communication, and inter-university events.</li>
+          </ul>
+        </div>
+        <div class="card p-4 shadow">
+          <h4>Campus Ambassador – DAIRA'25</h4>
+          <p class="text-muted">FAST NUCES CFC, Faisalabad | April 2025</p>
+          <ul class="text-start">
+            <li>Promoted participation and represented UOG at DAIRA.</li>
+            <li>Managed logistics, communications, and delegation activities.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-5">Contact Me 📱</h2>
+    <div class="row justify-content-center">
+      <!-- Email Card -->
+      <div class="col-md-5 mb-4">
+        <a href="mailto:zunairkhawajaa@gmail.com" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm border-0 hover-shadow transition rounded-4">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <i class="fas fa-envelope fa-2x me-3 text-danger"></i>
+              <div class="text-start">
+                <h5 class="mb-1">Email</h5>
+                <p class="mb-0">zunairkhawajaa@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- LinkedIn Card -->
+      <div class="col-md-5 mb-4">
+        <a href="https://linkedin.com/in/zunair-bin-zubair9059421a3" target="_blank" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm border-0 hover-shadow transition rounded-4">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <i class="fab fa-linkedin fa-2x me-3 text-primary"></i>
+              <div class="text-start">
+                <h5 class="mb-1">LinkedIn</h5>
+                <p class="mb-0">linkedin.com/in/zunair-bin-zubair9059421a3</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
