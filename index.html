@@ -1,699 +1,835 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zunair Bin Zubair </title>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" />
-  <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
-  <link rel="stylesheet" href="assets/fonts/material-icons.min.css" />
-  <link rel="stylesheet" href="assets/css/custom.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-..."
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<!-- Add this in your <head> or before </body> -->
-<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+  <meta name="description" content="Zunair Bin Zubair - Professional Portfolio showcasing innovative projects and technical expertise" />
+  <meta name="author" content="Zunair Bin Zubair" />
+  <meta name="keywords" content="portfolio, developer, designer, professional, projects" />
+  
+  <title>Zunair Bin Zubair | Professional Portfolio</title>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Modern font combinations -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Dev Icons -->
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Favicon & OG -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta property="og:title" content="Zunair Bin Zubair - Portfolio" />
+  <meta property="og:description" content="Explore my work, skills, and projects in web, UI/UX, and software engineering." />
+  <meta property="og:image" content="assets/img/og-image.png" />
+  <meta property="og:type" content="website" />
 
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  rel="stylesheet"
-/>
-<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
-
-
-<!-- Bootstrap Icons CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-
-
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  crossorigin="anonymous"
-/>
-
+  <!-- Custom Styling -->
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .nav-link {
-      cursor: pointer;
-    }
-        body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      line-height: 1.7;
+    :root {
+      --primary-color: #6366f1;
+      --secondary-color: #8b5cf6;
+      --accent-color: #06b6d4;
+      --dark-color: #0f172a;
+      --light-color: #f8fafc;
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+      --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+      --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-heavy: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --border-radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-        body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      line-height: 1.7;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    h2 {
+    body {
+      font-family: 'Inter', 'Space Grotesk', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: var(--light-color);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--light-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gradient-primary);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      color: #2c3e50;
+      line-height: 1.2;
+      margin-bottom: 1rem;
     }
 
-    h4 {
-      color: #1a1a1a;
-      font-weight: 600;
+    .display-1, .display-4, .hero-title {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-  .custom-card-hover:hover {
-    background: linear-gradient(135deg, #5a43d7, #7765e3);
-    color: #fff;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-  }
-  .custom-card i {
-    vertical-align: middle;
-  }
-    .card {
+
+    .gradient-text {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-bg {
+      background: var(--gradient-primary);
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: var(--shadow-light);
+    }
+
+    .card-modern {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-light);
       border: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: var(--transition);
+      overflow: hidden;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    .card-modern:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: var(--shadow-heavy);
     }
 
-      /* Base card style */
-    .custom-card {
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      cursor: default;
+    /* Enhanced Navigation Styles */
+    .navbar {
+      background: rgba(15,23,42,0.92) !important;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.07);
+      transition: var(--transition);
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: 2.1rem;
+      color: white !important;
+      letter-spacing: 2px;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      color: rgba(255,255,255,0.80) !important;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem !important;
+      border-radius: 8px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: white !important;
+      background: var(--gradient-primary);
+      transform: translateY(-2px);
+    }
+
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--gradient-primary);
+      transition: var(--transition);
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 80%;
+    }
+
+    .cta-nav-button {
+      background: var(--gradient-primary) !important;
+      border: none !important;
+      border-radius: 25px !important;
+      padding: 0.6rem 1.5rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px;
+      transition: var(--transition) !important;
+      box-shadow: var(--shadow-medium) !important;
+    }
+
+    .cta-nav-button:hover {
+      transform: translateY(-2px) scale(1.05) !important;
+      box-shadow: var(--shadow-heavy) !important;
+    }
+
+    /* Enhanced Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
-      color: #333;
-      background: #fff;
+      justify-content: center;
+      padding-top: 8vh;
     }
-    /* Hover effect for all cards */
-    .custom-card:hover {
-      background: #7765e3;
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="gradient1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(99,102,241,0.23)"/><stop offset="100%" style="stop-color:rgba(99,102,241,0)"/></radialGradient><radialGradient id="gradient2" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(6,182,212,0.12)"/><stop offset="100%" style="stop-color:rgba(6,182,212,0)"/></radialGradient></defs><circle cx="300" cy="200" r="150" fill="url(%23gradient1)"/><circle cx="700" cy="800" r="200" fill="url(%23gradient2)"/><circle cx="800" cy="300" r="100" fill="url(%23gradient1)"/></svg>');
+      animation: float 25s ease-in-out infinite;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.23);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      color: rgba(255,255,255,0.93);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .profile-image-modern {
+      transition: var(--transition);
+      position: relative;
+      cursor: pointer;
+      width: 185px !important;
+      height: 185px !important;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 32px rgba(99, 102, 241, 0.19);
+    }
+
+    .profile-image-modern:hover {
+      transform: scale(1.08) rotate(2deg);
+      box-shadow: 0 24px 48px rgba(99,102,241,0.35) !important;
+    }
+
+    .profile-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: var(--transition);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .profile-image-modern:hover .profile-overlay {
+      opacity: 0.16;
+    }
+
+    .social-btn {
+      border-radius: 50px !important;
+      padding: 0.7rem 2.3rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.5px;
+      transition: var(--transition) !important;
+      border: none !important;
+      position: relative;
+      overflow: hidden;
+    }
+    .social-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transition: var(--transition);
+    }
+    .social-btn:hover::before {
+      left: 100%;
+    }
+    .social-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: var(--shadow-heavy) !important;
+    }
+    .btn-primary.social-btn {
+      background: var(--gradient-primary) !important;
       color: #fff !important;
-      box-shadow: 0 10px 20px rgba(119, 101, 227, 0.5);
-      transform: translateY(-8px);
     }
-    /* Change icon color on hover */
-    .custom-card:hover i {
+    .btn-dark.social-btn {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
       color: #fff !important;
     }
 
-    /* Highlighted middle column card */
-    .custom-card-highlight {
-      border-radius: 15px;
-      background: linear-gradient(135deg, #5a43d7, #7765e3);
-      cursor: default;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(90, 67, 215, 0.6);
-      transition: all 0.4s ease;
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
     }
-    .custom-card-highlight:hover {
-      background: linear-gradient(135deg, #7765e3, #5a43d7);
-      box-shadow: 0 15px 35px rgba(119, 101, 227, 0.7);
-      transform: translateY(-10px);
+    .scroll-arrow {
+      width: 50px; height: 50px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 1.2rem;
+      transition: var(--transition);
+      animation: bounce 2s infinite;
+      background: rgba(0,0,0,0.10);
     }
-
-    /* Responsive tweak: center text on small devices */
-    @media (max-width: 767px) {
-      .custom-card {
-        justify-content: center;
-        text-align: center;
-      }
+    .scroll-arrow:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      background: rgba(255,255,255,0.11);
     }
-
-    .text-muted {
-      font-size: 0.95rem;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0);}
+      40% { transform: translateY(-10px);}
+      60% { transform: translateY(-5px);}
     }
 
-    a:hover {
-      text-decoration: underline;
+    .hero .text-muted { color: rgba(255,255,255,0.7) !important; }
+    .hero .lead { color: rgba(255,255,255,0.84) !important; }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero { padding: 2rem 0; text-align: center; }
+      .profile-image-modern { width: 130px !important; height: 130px !important; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-buttons .btn { display: block; margin: 0.7rem auto !important; width: 200px; }
+      .scroll-indicator { position: relative; bottom: auto; margin-top: 2.5rem;}
     }
 
-    ul {
-      padding-left: 1.2rem;
+    /* Animations */
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(50px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px);}
+      to { opacity: 1; transform: translateX(0);}
     }
 
-    .section-heading {
+    /* Section Styling */
+    .section { padding: 5rem 0; }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-align: center;
       margin-bottom: 3rem;
+      position: relative;
+      letter-spacing: 1px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%; transform: translateX(-50%);
+      width: 80px; height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+    @media (max-width: 768px) {
+      .hero { text-align: center; padding: 2rem 0; }
+      .profile-image-modern { width: 120px !important; height: 120px !important;}
+      .hero-title { font-size: 1.7rem;}
+      .section { padding: 3rem 0;}
     }
 
-    .contact-section .card {
-      background: #ffffff;
+    /* Loading Animation */
+    .loading-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--light-color);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 0.8s ease-in-out 1.7s both;
     }
-
-    @media (max-width: 576px) {
-      .section-heading {
-        font-size: 1.5rem;
-      }
-
-      .card {
-        padding: 1rem;
-      }
+    .loading-spinner {
+      width: 54px; height: 54px;
+      border: 4px solid var(--light-color);
+      border-top: 4px solid var(--primary-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
     }
-
-    .nav-link {
-    transition: all 0.2s ease-in-out;
-  }
-  .nav-link:hover {
-    color: #0d6efd !important;
-    transform: scale(1.05);
-  }
-
-    .btn-purple {
-  background-color: #6f42c1;
-  color: white;
-  padding: 10px 20px;
-  font-weight: 500;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.btn-purple:hover {
-  background-color: #0ea0ff;
-  text-decoration: none;
-  color: white;
-}
-
-.btn i {
-  margin-right: 8px;
-}
-
- .logo-text {
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-    color: #0ea0ff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
-  }
-
-  .logo-text:hover {
-    color: #6610f2;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-  }
-
-     .skill-icon {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-
-  .skill-icon:hover {
-    transform: scale(1.1);
-    background-color: #f0f0f0;
-  }
-
-  .skill-icon i {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .skill-icon p {
-    font-weight: 500;
-    margin-top: 0.5rem;
-  }
-
-  .skill-icon {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    padding: 1rem;
-    border-radius: 12px;
-  }
-
-  .skill-icon:hover {
-    transform: scale(1.1);
-    background-color: #f0f0f0;
-  }
-
-  .skill-icon i, .skill-icon img, .skill-icon span {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .skill-icon p {
-    font-weight: 500;
-    margin-top: 0.5rem;
-  }
-
-   .carousel-item {
-    transition: transform 0.6s ease-in-out;
-  }
-  .card img {
-    object-fit: cover;
-    height: 200px;
-  }
-  .card {
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-
+    @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+    @keyframes fadeOut { to { opacity: 0; visibility: hidden;} }
   </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
 
-    <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-    <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow-sm" role="navigation" aria-label="Main Navigation">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-4 logo-text" href="#">
-      Zunair <span class="text-primary"></span>
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item">
-          <a class="nav-link px-3 active" href="#hero">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="#what-i-do">What I Do</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-          <a
-            class="btn btn-primary btn-sm px-3 py-2 shadow-sm"
-            href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Let's Connect <i class="fab fa-linkedin ms-1"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-overlay">
+    <div class="loading-spinner"></div>
   </div>
-</nav>
 
-
-<section id="hero" class="d-flex align-items-center text-center" style="min-height: 100vh; background: #f8f9fa;">
-  <div class="container py-5">
-    <!-- Profile Image -->
-    <div class="mb-4" data-aos="zoom-in" data-aos-delay="100">
-      <div
-        class="rounded-circle mx-auto shadow"
-        style="
-          width: 160px;
-          height: 160px;
-          background-image: url('assets/img/avatars/zunair.jpeg');
-          background-size: cover;
-          background-position: center;
-          transition: transform 0.3s ease;
-        "
-        role="img"
-        aria-label="Profile photo of Zunair Khawaja"
-        onmouseover="this.style.transform='scale(1.05)'"
-        onmouseout="this.style.transform='scale(1)'"
-      ></div>
-    </div>
-
-    <!-- Heading -->
-    <h1 class="fw-bold display-4" data-aos="fade-up">
-      Hey! I'm <span class="text-primary">Zunair Khawaja</span>
-    </h1>
-    <h2 class="text-secondary fs-4 mt-2 mb-3" data-aos="fade-up" data-aos-delay="100">
-      Full-Stack Developer | React, Node.js, AI Integrator
-    </h2>
-
-    <!-- Mission -->
-    <p class="text-muted fst-italic mb-2" data-aos="fade-up" data-aos-delay="150">
-      I craft digital solutions that streamline workflows and solve real world problems.
-    </p>
-
-    <!-- Pitch -->
-    <p class="lead mx-auto" style="max-width: 600px; color: #333;" data-aos="fade-up" data-aos-delay="200">
-      I build scalable web & mobile applications. Passionate about crafting solutions.
-    </p>
-
-    <!-- Buttons -->
-    <div class="mt-4" data-aos="fade-up" data-aos-delay="300">
-      <a
-        class="btn btn-primary btn-lg me-3 shadow"
-        href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/"
-        target="_blank"
-        rel="noopener"
-        aria-label="Visit LinkedIn Profile"
-      >
-        <i class="fab fa-linkedin me-2"></i> LinkedIn
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-effect" role="navigation" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4 logo-text" href="#hero">
+        <i class="fas fa-code me-2"></i>Zunair <span class="gradient-text">Khawaja</span>
       </a>
-      <a
-        class="btn btn-dark btn-lg shadow"
-        href="https://github.com/khzunair"
-        target="_blank"
-        rel="noopener"
-        aria-label="Visit GitHub Profile"
-      >
-        <i class="fab fa-github me-2"></i> GitHub
-      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link px-3 active" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#what-i-do">What I Do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-primary btn-sm px-3 py-2 shadow-sm cta-nav-button"
+              href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/" target="_blank"
+              rel="noopener noreferrer">
+              Let's Connect <i class="fab fa-linkedin ms-1"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section id="about" class="py-5 bg-light">
+  <!-- Hero Section -->
+  <section id="hero" class="hero d-flex align-items-center text-center">
+    <div class="container py-5">
+      <!-- Profile Image -->
+      <div class="mb-4" data-aos="zoom-in" data-aos-delay="80">
+        <div class="profile-image-modern rounded-circle mx-auto shadow-lg"
+          style="background-image: url('assets/img/avatars/zunair.jpeg');
+                 background-size: cover;
+                 background-position: center;"
+          role="img"
+          aria-label="Profile photo of Zunair Khawaja">
+          <div class="profile-overlay"></div>
+        </div>
+      </div>
+
+      <h1 class="hero-title fw-bold display-4 mb-3" data-aos="fade-up">
+        Hey! I'm <span class="gradient-text">Zunair Khawaja</span>
+      </h1>
+      <h2 class="hero-subtitle text-secondary fs-4 mt-2 mb-3" data-aos="fade-up" data-aos-delay="100">
+        Full-Stack Developer | React, Node.js, AI Integration
+      </h2>
+      <p class="text-muted fst-italic mb-2" data-aos="fade-up" data-aos-delay="150">
+        I craft digital solutions that streamline workflows and solve real world problems.
+      </p>
+      <p class="lead mx-auto mb-4" style="max-width: 600px; color: #64748b;" data-aos="fade-up" data-aos-delay="200">
+        I build scalable web & mobile applications. Passionate about crafting solutions.
+      </p>
+      <div class="hero-buttons mt-4" data-aos="fade-up" data-aos-delay="300">
+        <a class="btn btn-primary btn-lg me-3 shadow-lg social-btn"
+          href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/"
+          target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile">
+          <i class="fab fa-linkedin me-2"></i> LinkedIn
+        </a>
+        <a class="btn btn-dark btn-lg shadow-lg social-btn"
+          href="https://github.com/khzunair" target="_blank"
+          rel="noopener" aria-label="Visit GitHub Profile">
+          <i class="fab fa-github me-2"></i> GitHub
+        </a>
+      </div>
+      <div class="scroll-indicator mt-5" data-aos="fade-up" data-aos-delay="430">
+        <a href="#about" class="text-decoration-none">
+          <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- About Me Section - Revamped -->
+<section id="about" class="section bg-light position-relative">
   <div class="container">
-    <!-- Heading -->
+    <!-- Section Heading -->
     <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="fw-bold display-5" style="font-family: 'Poppins', sans-serif;">About Me</h2>
-      <!-- Optional subtitle -->
-      <!-- <p class="text-muted fs-5">Get to know me better</p> -->
+      <h2 class="section-title gradient-text">About Me</h2>
+      <p class="text-muted fs-5">Discover my passion, skills, and vision for impactful digital solutions.</p>
     </div>
-
     <div class="row justify-content-center align-items-center">
       <!-- Profile Photo -->
       <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="zoom-in">
-        <img
-          src="assets/img/avatars/graduation.png"
-          alt="Zunair Khawaja"
-          class="rounded-circle shadow"
-          style="width: 220px; height: 220px; object-fit: cover; border: 5px solid #0d6efd;"
-        />
+        <div class="profile-image-modern mx-auto" style="
+          width: 220px;
+          height: 220px;
+          background-image: url('assets/img/avatars/graduation.png');
+          background-size: cover;
+          background-position: center;
+          border: 5px solid var(--primary-color);
+          box-shadow: 0 14px 36px rgba(99,102,241,0.22);
+        ">
+          <div class="profile-overlay"></div>
+        </div>
       </div>
-
-      <!-- About Details -->
-      <div class="col-md-7" data-aos="fade-left" data-aos-delay="100">
+      <!-- Details List -->
+      <div class="col-md-7" data-aos="fade-left" data-aos-delay="120">
         <ul class="list-unstyled fs-5 text-secondary" style="line-height: 1.8;">
-          <li class="mb-3">
-            <i class="bi bi-code-slash fs-4 text-primary me-2"></i>
-            Computer Science graduate who turns <strong>ideas into scalable digital products</strong> using MERN stack, AI, and real-world architecture.
+          <li class="mb-4 d-flex align-items-start">
+            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-code-slash"></i></span>
+            <span>
+              Computer Science graduate transforming <span class="fw-bold gradient-text">ideas into scalable digital products</span> with MERN stack, AI, and robust architecture.
+            </span>
           </li>
-          <li class="mb-3">
-            <i class="bi bi-laptop fs-4 text-primary me-2"></i>
-            Passionate about <strong>building APIs, microservices, and mobile-first UIs</strong> that solve problems and delight users.
+          <li class="mb-4 d-flex align-items-start">
+            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-laptop"></i></span>
+            <span>
+              Passionate about crafting <span class="fw-bold gradient-text">APIs, microservices, and mobile-first UIs</span> that solve problems and delight users.
+            </span>
           </li>
-          <li class="mb-3">
-            <i class="bi bi-robot fs-4 text-primary me-2"></i>
-            Experienced in <strong>AI/ML integrations</strong>, RESTful APIs, and tools like TensorFlow, Flask, and third-party automation.
+          <li class="mb-4 d-flex align-items-start">
+            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-robot"></i></span>
+            <span>
+              Skilled in <span class="fw-bold gradient-text">AI/ML integration</span>, RESTful APIs, and platforms like TensorFlow, Flask, and third-party automations.
+            </span>
           </li>
-          <li class="mb-3">
-            <i class="bi bi-people fs-4 text-primary me-2"></i>
-            Committed to <strong>continuous learning, agile teamwork, and shipping fast</strong> in dynamic environments.
+          <li class="mb-4 d-flex align-items-start">
+            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-people"></i></span>
+            <span>
+              Committed to <span class="fw-bold gradient-text">continuous learning, agile teamwork, and rapid delivery</span> in dynamic environments.
+            </span>
           </li>
         </ul>
       </div>
     </div>
   </div>
+  <!-- Decorative Shape (optional) -->
+  <div style="position:absolute;bottom:-40px;right:-60px;z-index:0;opacity:0.07;">
+    <i class="fas fa-graduation-cap fa-7x"></i>
+  </div>
 </section>
 
-
-<!-- Make sure to include Bootstrap Icons CSS in your <head> for the icons to work -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-
-
-<section id="what-i-do" class="py-5 bg-white">
+<!-- What I Do Section - Revamped -->
+<section id="what-i-do" class="section bg-white position-relative">
   <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif;">
+      <h2 class="section-title gradient-text">
         What I Do <span role="img" aria-label="coder">👨‍💻</span>
       </h2>
-      <hr style="width: 60px; height: 3px; background: linear-gradient(90deg, #7765e3, #5a43d7); border: none; margin: 0 auto; border-radius: 5px;">
+      <p class="text-muted fs-5 mb-2">From product architecture to global impact — here’s how I deliver value.</p>
+      <div style="width: 70px; height: 4px; margin: 0 auto; border-radius:5px; background: var(--gradient-primary);"></div>
     </div>
-
     <div class="row g-4">
       <!-- LEFT COLUMN -->
       <div class="col-md-4 d-flex flex-column gap-4">
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up">
-          <i class="bi bi-diagram-3-fill text-primary fs-4 me-3"></i>
-          Architect backend systems and scalable APIs
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-diagram-3-fill"></i></span>
+          <span>Architect backend systems and scalable APIs</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="50">
-          <i class="bi bi-window-sidebar text-primary fs-4 me-3"></i>
-          Build full-stack web apps using MERN & Flask
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="60">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-window-sidebar"></i></span>
+          <span>Build full-stack web apps using MERN & Flask</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="100">
-          <i class="bi bi-phone text-primary fs-4 me-3"></i>
-          Develop mobile apps using React Native
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="120">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-phone"></i></span>
+          <span>Develop mobile apps using React Native</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="150">
-          <i class="bi bi-upload text-primary fs-4 me-3"></i>
-          Deploy apps using AWS, Heroku, VMs Supabase & CI/CD pipelines
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="180">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-upload"></i></span>
+          <span>Deploy apps with AWS, Heroku, VMs, Supabase & CI/CD pipelines</span>
         </div>
       </div>
-
       <!-- MIDDLE COLUMN -->
       <div class="col-md-4 d-flex flex-column gap-4">
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up">
-          <i class="bi bi-kanban text-primary fs-4 me-3"></i>
-          Lead freelance & contract-based product development
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-kanban"></i></span>
+          <span>Lead freelance & contract-based product development</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="50">
-          <i class="bi bi-robot text-primary fs-4 me-3"></i>
-          Integrate AI models (e.g. disease detection, resume screening)
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="60">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-robot"></i></span>
+          <span>Integrate AI models (disease detection, resume screening)</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="100">
-          <i class="bi bi-file-earmark-text text-primary fs-4 me-3"></i>
-          Write documentation, system architecture & API specs
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="120">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-file-earmark-text"></i></span>
+          <span>Write documentation, system architecture & API specs</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="150">
-          <i class="bi bi-clock-history text-primary fs-4 me-3"></i>
-          Deliver high-quality results under tight deadlines
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="180">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-clock-history"></i></span>
+          <span>Deliver high-quality results under tight deadlines</span>
         </div>
       </div>
-
       <!-- RIGHT COLUMN -->
       <div class="col-md-4 d-flex flex-column gap-4">
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up">
-          <i class="bi bi-lightbulb text-primary fs-4 me-3"></i>
-          Solve real-world problems with digital innovation
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-lightbulb"></i></span>
+          <span>Solve real-world problems with digital innovation</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="50">
-          <i class="bi bi-people text-primary fs-4 me-3"></i>
-          Collaborate with cross-functional remote teams
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="60">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-people"></i></span>
+          <span>Collaborate with cross-functional remote teams</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="100">
-          <i class="bi bi-bar-chart-line text-primary fs-4 me-3"></i>
-          Align tech with business goals & user needs
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="120">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-bar-chart-line"></i></span>
+          <span>Align tech with business goals & user needs</span>
         </div>
-        <div class="card p-4 shadow-sm custom-card h-100" data-aos="fade-up" data-aos-delay="150">
-          <i class="bi bi-globe text-primary fs-4 me-3"></i>
-          Contribute to global freelance & remote projects
+        <div class="card card-modern p-4 h-100 d-flex flex-row align-items-center" data-aos="fade-up" data-aos-delay="180">
+          <span class="me-3 gradient-text" style="font-size:2rem;"><i class="bi bi-globe"></i></span>
+          <span>Contribute to global freelance & remote projects</span>
         </div>
+      </div>
+    </div>
+  </div>
+  <!-- Decorative Shape (optional) -->
+  <div style="position:absolute;top:-35px;left:-60px;z-index:0;opacity:0.07;">
+    <i class="fas fa-lightbulb fa-7x"></i>
+  </div>
+</section>
+
+<!-- Skills Section - Revamped -->
+<section id="skills" class="section skills-section bg-light text-center">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title gradient-text">Skills <span role="img" aria-label="fire">🔥</span></h2>
+      <p class="text-muted fs-5">Technologies, tools & frameworks I master for building powerful products.</p>
+    </div>
+    <div class="row justify-content-center g-3">
+      <!-- FRONTEND -->
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="0">
+        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">React</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="40">
+        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">React Native</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="80">
+        <i class="devicon-redux-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">Redux</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="120">
+        <i class="devicon-nextjs-original-wordmark" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">Next.js</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="160">
+        <img src="https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" alt="Material UI" style="height: 3rem;" />
+        <p class="mt-2 fw-semibold text-secondary">Material UI</p>
+      </div>
+      <!-- BACKEND -->
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="200">
+        <i class="devicon-nodejs-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">Node.js</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="240">
+        <i class="devicon-express-original" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">Express</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="280">
+        <i class="devicon-flask-original" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">Flask</p>
+      </div>
+      <!-- DATABASES -->
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="320">
+        <i class="devicon-mongodb-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">MongoDB</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="360">
+        <i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">SQL</p>
+      </div>
+      <!-- CORE -->
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="400">
+        <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">JavaScript</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="440">
+        <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">HTML5</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="480">
+        <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">CSS3</p>
+      </div>
+      <!-- TOOLS -->
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="520">
+        <i class="devicon-git-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">Git</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="560">
+        <i class="devicon-fastapi-plain colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">REST APIs</p>
+      </div>
+      <!-- AI / ML TOOLS -->
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="600">
+        <i class="devicon-tensorflow-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">TensorFlow</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="640">
+        <i class="devicon-keras-original colored" style="font-size: 3rem;"></i>
+        <p class="mt-2 fw-semibold text-secondary">Keras</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="680">
+        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 3rem; object-fit: contain;" />
+        <p class="mt-2 fw-semibold text-secondary">Hugging Face</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="720">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" style="height: 3rem; object-fit: contain;" />
+        <p class="mt-2 fw-semibold text-secondary">NumPy</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="760">
+        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn" style="height: 3rem;" />
+        <p class="mt-2 fw-semibold text-secondary">scikit-learn</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="800">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="MobileNetV2" style="height: 3rem; object-fit: contain;" />
+        <p class="mt-2 fw-semibold text-secondary">MobileNetV2</p>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section py-5 text-center bg-light">
+<!-- Experience Section - Revamped -->
+<section id="experience" class="section experience-section bg-light text-center">
   <div class="container">
-    <h2 class="mb-5 fw-bold">Skills <span role="img" aria-label="fire">🔥</span></h2>
-
-    <div class="row justify-content-center g-4">
-
-      <!-- FRONTEND -->
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">React</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">React Native</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-redux-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">Redux</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-nextjs-original-wordmark" style="font-size: 3rem;"></i>
-        <p class="mt-2">Next.js</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <img src="https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" alt="Material UI" style="height: 3rem;" />
-        <p class="mt-2">Material UI</p>
-      </div>
-
-      <!-- BACKEND -->
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-nodejs-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">Node.js</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-express-original" style="font-size: 3rem;"></i>
-        <p class="mt-2">Express</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-flask-original" style="font-size: 3rem;"></i>
-        <p class="mt-2">Flask</p>
-      </div>
-
-      <!-- DATABASES -->
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-mongodb-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">MongoDB</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">SQL</p>
-      </div>
-
-      <!-- CORE -->
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">JavaScript</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">HTML5</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">CSS3</p>
-      </div>
-
-      <!-- TOOLS -->
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-git-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">Git</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-fastapi-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">REST APIs</p>
-      </div>
-
-      <!-- AI / ML TOOLS -->
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-tensorflow-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">TensorFlow</p>
-      </div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <i class="devicon-keras-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2">Keras</p>
-      </div>
-<!-- Hugging Face -->
-<div class="col-4 col-sm-3 col-md-2 skill-icon">
-  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 3rem; object-fit: contain;" />
-  <p class="mt-2">Hugging Face</p>
-</div>
-<!-- NumPy -->
-<div class="col-4 col-sm-3 col-md-2 skill-icon">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" style="height: 3rem; object-fit: contain;" />
-  <p class="mt-2">NumPy</p>
-</div>
-      <div class="col-4 col-sm-3 col-md-2 skill-icon">
-        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn" style="height: 3rem;" />
-        <p class="mt-2">scikit-learn</p>
-      </div>
-<!-- MobileNetV2 (Use TensorFlow logo instead as it's a TF model) -->
-<div class="col-4 col-sm-3 col-md-2 skill-icon">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="MobileNetV2" style="height: 3rem; object-fit: contain;" />
-  <p class="mt-2">MobileNetV2</p>
-</div>
-
-
-  </div>
-</section>
-
-
-<!-- Experience Section -->
-<section class="experience-section py-5 text-center bg-light">
-  <div class="container">
-    <h2 class="mb-5">Working Experience 💼</h2>
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title gradient-text">Working Experience <span role="img" aria-label="briefcase">💼</span></h2>
+      <p class="text-muted fs-5">Professional journey from SaaS platforms to medical portals.</p>
+    </div>
     <div class="row justify-content-center">
       <div class="col-md-10">
-
         <!-- Imam Organization -->
-        <div class="card mb-4 p-4 shadow">
-          <h4 class="fw-bold">Software Developer – Imam Organization</h4>
-          <p class="text-muted mb-2">Nov 2024 – Jan 2025 | Remote (UK)</p>
-          <ul class="text-start mb-0">
-            <li>Built a School Management System serving 500+ users with modules for attendance, grading, and user roles.</li>
-            <li>Designed secure multi-role authentication using JWT (Admin, Teacher, Student, Family).</li>
-            <li>Integrated AWS S3 & Cloudinary for scalable media delivery, reducing content latency by 60%.</li>
+        <div class="card card-modern mb-5 p-4 text-start" data-aos="fade-up" data-aos-delay="0">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fa-solid fa-building fa-lg gradient-text me-2"></i>
+            <h4 class="fw-bold mb-0">Software Developer – Imam Organization</h4>
+          </div>
+          <div class="mb-2 text-primary fw-semibold">Nov 2024 – Jan 2025 | Remote (UK)</div>
+          <ul class="mb-0">
+            <li>Built a School Management System serving 500+ users with attendance, grading, and user roles.</li>
+            <li>Designed secure multi-role authentication (JWT): Admin, Teacher, Student, Family.</li>
+            <li>Integrated AWS S3 & Cloudinary for scalable media delivery, reducing latency by 60%.</li>
             <li>Automated grading/reporting workflows, saving ~2 hrs/week via online test systems.</li>
           </ul>
         </div>
-
         <!-- NextGen Cure -->
-        <div class="card mb-4 p-4 shadow">
-          <h4 class="fw-bold">Software Developer Intern – NextGen Cure</h4>
-          <p class="text-muted mb-2">Nov 2023 – Apr 2024 | UOG Business Incubation Center</p>
-          <ul class="text-start mb-0">
-            <li>Developed React Native app screens and managed state using Redux Toolkit.</li>
-            <li>Created scalable RESTful APIs in Node.js and integrated real-time frontend/backend communication.</li>
+        <div class="card card-modern mb-5 p-4 text-start" data-aos="fade-up" data-aos-delay="80">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fa-solid fa-flask fa-lg gradient-text me-2"></i>
+            <h4 class="fw-bold mb-0">Software Developer Intern – NextGen Cure</h4>
+          </div>
+          <div class="mb-2 text-primary fw-semibold">Nov 2023 – Apr 2024 | UOG Business Incubation Center</div>
+          <ul class="mb-0">
+            <li>Developed React Native app screens; managed state with Redux Toolkit.</li>
+            <li>Created scalable RESTful APIs in Node.js and enabled real-time frontend/backend integration.</li>
             <li>Collaborated on Git-based version control and contributed to QA and deployment cycles.</li>
           </ul>
         </div>
-
         <!-- MedEdPort -->
-        <div class="card mb-4 p-4 shadow">
-          <h4 class="fw-bold">Full Stack Developer – MedEdPort</h4>
-          <p class="text-muted mb-2">Sep 2023 – Dec 2024 | Remote (USA)</p>
-          <ul class="text-start mb-0">
+        <div class="card card-modern p-4 text-start" data-aos="fade-up" data-aos-delay="160">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fa-solid fa-user-md fa-lg gradient-text me-2"></i>
+            <h4 class="fw-bold mb-0">Full Stack Developer – MedEdPort</h4>
+          </div>
+          <div class="mb-2 text-primary fw-semibold">Sep 2023 – Dec 2024 | Remote (USA)</div>
+          <ul class="mb-0">
             <li>Architected a real-time medical portal for professionals using MERN stack and JWT auth.</li>
             <li>Optimized media architecture via Cloudinary; reduced upload latency by 40%.</li>
             <li>Set up CI/CD via Heroku; led end-to-end SDLC including planning, execution, and delivery.</li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
+  <!-- Decorative background icon (optional) -->
+  <div style="position:absolute;bottom:-40px;right:-60px;z-index:0;opacity:0.08;">
+    <i class="fa-solid fa-briefcase fa-7x"></i>
+  </div>
 </section>
 
-<section id="projects" class="py-5 bg-light text-center">
+
+<!-- Projects Section - Revamped, Premium UI -->
+<section id="projects" class="section bg-light text-center position-relative">
   <div class="container">
-    <h2 class="mb-5 fw-bold">Projects 💻</h2>
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title gradient-text">Featured Projects <span role="img" aria-label="laptop">💻</span></h2>
+      <p class="text-muted fs-5">Showcasing my most impactful work in AI, SaaS, and digital products.</p>
+    </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
       <!-- Planteria – Highlighted Project -->
-      <div class="col">
-        <div class="card h-100 shadow-lg border-primary border-2">
+      <div class="col" data-aos="zoom-in" data-aos-delay="0">
+        <div class="card card-modern h-100 border-0 shadow-lg position-relative">
           <div class="project-img-wrapper position-relative">
-            <img src="./assets/img/nature/planteria.png" alt="Planteria App" class="img-fluid rounded-top">
-            <span class="badge bg-primary position-absolute top-0 start-0 m-2 px-3 py-2">🌿 Featured</span>
+            <img src="./assets/img/nature/planteria.png" alt="Planteria App" class="img-fluid rounded-top" loading="lazy">
+            <span class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2" style="background: var(--gradient-primary); color: #fff; font-weight: 600;">🌿 Featured</span>
           </div>
-          <div class="card-body">
-            <h4 class="card-title fw-bold">Planteria – AI Plant Disease Detection</h4>
-            <p class="card-text text-justify small">
-              An AI-powered mobile application using a custom-trained AI model (MobileNetV2) to detect plant diseases from images with 96% accuracy. Includes an integrated e-commerce marketplace for gardening supplies where vendors register, onboard, and start selling – empowering community-based micro-entrepreneurship.
+          <div class="card-body text-start">
+            <h4 class="card-title fw-bold gradient-text">Planteria – AI Plant Disease Detection</h4>
+            <p class="card-text small">
+              AI-powered mobile app using MobileNetV2 to identify plant diseases from images (96% accuracy). Integrated e-commerce for gardening supplies, empowering vendors and community-based micro-entrepreneurship.
             </p>
-            <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
+            <div class="d-flex flex-wrap gap-2 mt-3">
               <span class="badge bg-dark">React Native</span>
               <span class="badge bg-secondary">Flask</span>
               <span class="badge bg-success">Node.js</span>
@@ -706,18 +842,18 @@
       </div>
 
       <!-- HireFlow – Highlighted Project -->
-      <div class="col">
-        <div class="card h-100 shadow-lg border-primary border-2">
+      <div class="col" data-aos="zoom-in" data-aos-delay="60">
+        <div class="card card-modern h-100 border-0 shadow-lg position-relative">
           <div class="project-img-wrapper position-relative">
-            <img src="./assets/img/nature/HireFlow.png" alt="HireFlow App" class="img-fluid rounded-top">
-            <span class="badge bg-primary position-absolute top-0 start-0 m-2 px-3 py-2">🚀 Hackathon Winner</span>
+            <img src="./assets/img/nature/HireFlow.png" alt="HireFlow App" class="img-fluid rounded-top" loading="lazy">
+            <span class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2" style="background: var(--gradient-primary); color: #fff; font-weight: 600;">🚀 Hackathon Winner</span>
           </div>
-          <div class="card-body">
-            <h4 class="card-title fw-bold">HireFlow – AI Resume Screening Platform</h4>
-            <p class="card-text text-justify small">
-              A SaaS web-based tool built that automate resume screening. Uses document filtering, PDF parsing, and RAG to extract relevant data and generate human-like summaries explaining why a candidate is a good, moderate, or poor fit for the job description – revolutionizing recruitment pipelines.
+          <div class="card-body text-start">
+            <h4 class="card-title fw-bold gradient-text">HireFlow – AI Resume Screening Platform</h4>
+            <p class="card-text small">
+              SaaS tool to automate resume screening. Uses PDF parsing, RAG, and human-like summaries for candidate fit analysis—revolutionizing recruitment pipelines for modern hiring.
             </p>
-            <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
+            <div class="d-flex flex-wrap gap-2 mt-3">
               <span class="badge bg-dark">React</span>
               <span class="badge bg-secondary">Flask</span>
               <span class="badge bg-success">Node.js</span>
@@ -731,17 +867,17 @@
       </div>
 
       <!-- MedEdPort -->
-      <div class="col">
-        <div class="card h-100 shadow">
+      <div class="col" data-aos="fade-up" data-aos-delay="120">
+        <div class="card card-modern h-100 border-0 shadow position-relative">
           <div class="project-img-wrapper">
-            <img src="./assets/img/nature/meded.png" alt="Mededport" class="img-fluid rounded-top">
+            <img src="./assets/img/nature/meded.png" alt="Mededport" class="img-fluid rounded-top" loading="lazy">
           </div>
-          <div class="card-body">
-            <h4 class="card-title">MedEdPort – Doctors Portal</h4>
-            <p class="card-text text-justify small">
-              Real-time educational and streaming platform for verified doctors. Implements secure authentication, secure media uploads via Cloudinary, and full CI/CD deployment pipeline for production reliability.
+          <div class="card-body text-start">
+            <h4 class="card-title gradient-text fw-bold">MedEdPort – Doctors Portal</h4>
+            <p class="card-text small">
+              Real-time educational portal for doctors. Implements secure JWT authentication, Cloudinary media uploads, and full CI/CD deployment for reliability.
             </p>
-            <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
+            <div class="d-flex flex-wrap gap-2 mt-2">
               <span class="badge bg-dark">React</span>
               <span class="badge bg-secondary">Node.js</span>
               <span class="badge bg-success">MongoDB</span>
@@ -753,17 +889,17 @@
       </div>
 
       <!-- News App -->
-      <div class="col">
-        <div class="card h-100 shadow">
+      <div class="col" data-aos="fade-up" data-aos-delay="180">
+        <div class="card card-modern h-100 border-0 shadow position-relative">
           <div class="project-img-wrapper">
-            <img src="./assets/img/nature/news app.png" alt="News App" class="img-fluid rounded-top">
+            <img src="./assets/img/nature/news app.png" alt="News App" class="img-fluid rounded-top" loading="lazy">
           </div>
-          <div class="card-body">
-            <h4 class="card-title">News App</h4>
-            <p class="card-text text-justify small">
-              Aggregates real-time news headlines from multiple countries and categories using NewsAPI. Users can filter by source, category, or country, and redirect to original articles. Also includes bookmarks and read-later features.
+          <div class="card-body text-start">
+            <h4 class="card-title gradient-text fw-bold">News App</h4>
+            <p class="card-text small">
+              Aggregates real-time news headlines from multiple countries and categories via NewsAPI, with source/category filters, bookmarks, and read-later features.
             </p>
-            <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
+            <div class="d-flex flex-wrap gap-2 mt-2">
               <span class="badge bg-dark">React</span>
               <span class="badge bg-secondary">NewsAPI</span>
               <span class="badge bg-success">Bootstrap</span>
@@ -773,17 +909,17 @@
       </div>
 
       <!-- Convo Panda -->
-      <div class="col">
-        <div class="card h-100 shadow">
+      <div class="col" data-aos="fade-up" data-aos-delay="240">
+        <div class="card card-modern h-100 border-0 shadow position-relative">
           <div class="project-img-wrapper">
-            <img src="./assets/img/nature/convo-panda.jpeg" alt="Convo Panda" class="img-fluid rounded-top">
+            <img src="./assets/img/nature/convo-panda.jpeg" alt="Convo Panda" class="img-fluid rounded-top" loading="lazy">
           </div>
-          <div class="card-body">
-            <h4 class="card-title">Convo Panda</h4>
-            <p class="card-text text-justify small">
-              A social messaging web app with private and group chat, friend requests, and real-time communication. Scalable architecture for community-style communication.
+          <div class="card-body text-start">
+            <h4 class="card-title gradient-text fw-bold">Convo Panda</h4>
+            <p class="card-text small">
+              Social messaging web app with private/group chat, friend requests, and real-time communication. Built with scalable, community-driven architecture.
             </p>
-            <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
+            <div class="d-flex flex-wrap gap-2 mt-2">
               <span class="badge bg-dark">React</span>
               <span class="badge bg-success">Socket.IO</span>
               <span class="badge bg-secondary">Node.js</span>
@@ -793,17 +929,17 @@
       </div>
 
       <!-- Netflix Clone -->
-      <div class="col">
-        <div class="card h-100 shadow">
+      <div class="col" data-aos="fade-up" data-aos-delay="300">
+        <div class="card card-modern h-100 border-0 shadow position-relative">
           <div class="project-img-wrapper">
-            <img src="./assets/img/nature/netflix clone.png" alt="Netflix Clone" class="img-fluid rounded-top">
+            <img src="./assets/img/nature/netflix clone.png" alt="Netflix Clone" class="img-fluid rounded-top" loading="lazy">
           </div>
-          <div class="card-body">
-            <h4 class="card-title">Netflix UI Clone</h4>
-            <p class="card-text text-justify small">
-              Rebuilt Netflix UI featuring browse by category, real-time previews, and movie detail modals using TMDB API.
+          <div class="card-body text-start">
+            <h4 class="card-title gradient-text fw-bold">Netflix UI Clone</h4>
+            <p class="card-text small">
+              Netflix UI rebuilt with browse by category, real-time previews, and movie detail modals using TMDB API and Firebase backend.
             </p>
-            <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
+            <div class="d-flex flex-wrap gap-2 mt-2">
               <span class="badge bg-dark">React</span>
               <span class="badge bg-danger">Firebase</span>
               <span class="badge bg-warning text-dark">TMDB API</span>
@@ -813,18 +949,18 @@
       </div>
 
       <!-- CMS Darntl -->
-      <div class="col">
-        <div class="card h-100 shadow border-warning border-2">
+      <div class="col" data-aos="fade-up" data-aos-delay="360">
+        <div class="card card-modern h-100 border-0 shadow border-warning border-2 position-relative">
           <div class="project-img-wrapper">
-            <img src="./assets/img/nature/bussiness analyical.png" alt="CMS Darntl" class="img-fluid rounded-top">
+            <img src="./assets/img/nature/bussiness analyical.png" alt="CMS Darntl" class="img-fluid rounded-top" loading="lazy">
           </div>
-          <div class="card-body">
-            <h4 class="card-title">CMS Darntl – Contact Management System</h4>
-            <p class="card-text text-justify small">
-              <span class="badge bg-secondary mb-2">My first freelance project 🎉</span><br>
-              A personal business contact management tool. Features PDF and spreadsheet report generation for contact data and business insights.
+          <div class="card-body text-start">
+            <h4 class="card-title gradient-text fw-bold">CMS Darntl – Contact Management System</h4>
+            <p class="card-text small">
+              <span class="badge bg-secondary mb-2">First Freelance Project 🎉</span><br>
+              Business contact management tool with PDF & spreadsheet report generation for actionable insights.
             </p>
-            <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
+            <div class="d-flex flex-wrap gap-2 mt-2">
               <span class="badge bg-dark">Spring Boot</span>
               <span class="badge bg-success">MySQL</span>
               <span class="badge bg-primary">React.js</span>
@@ -837,11 +973,15 @@
 
     </div>
   </div>
+  <!-- Decorative background icon (optional) -->
+  <div style="position:absolute;top:-40px;left:-55px;z-index:0;opacity:0.06;pointer-events:none;">
+    <i class="fa-solid fa-laptop-code fa-7x"></i>
+  </div>
 </section>
 
 
-<!-- Volunteer & Leadership Section -->
-<section class="volunteer-section py-5 text-center position-relative" style="background-color: #f8f9fa;">
+<!-- Volunteer & Leadership Section - Revamped -->
+<section id="volunteer" class="section volunteer-section bg-light text-center position-relative">
   <!-- Watermark Background -->
   <div style="
     position: absolute;
@@ -853,98 +993,153 @@
     background-size: 30%;
     opacity: 0.05;
     z-index: 0;
+    pointer-events: none;
   "></div>
-
   <div class="container position-relative" style="z-index: 1;">
-    <h2 class="mb-5 fw-bold">Volunteer & Leadership</h2>
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title gradient-text">Volunteer & Leadership</h2>
+      <p class="text-muted fs-5">Community impact, event leadership, and team building.</p>
+    </div>
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <div class="card p-4 mb-4 shadow-sm border-start border-4 border-primary text-start">
-          <h4 class="fw-semibold">General Secretary – Hayatian Computing Society</h4>
-          <p class="text-muted mb-2">University of Gujrat | 2024 – 2025</p>
-          <ul class="small ps-3">
-            <li>Led the execution of 10+ academic and social/tech events engaging 400+ students across university.</li>
-            <li>Coordinated inter-departmental coding contests and seminars, attracting 200+ participants.</li>
-            <li>Oversaw logistics and communications for large-scale inter-university hackathons, FYP expos, and competitive programming tournaments.</li>
+        <div class="card card-modern p-4 mb-5 border-start border-4 border-primary text-start" data-aos="fade-right">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fa-solid fa-users fa-lg gradient-text me-2"></i>
+            <h4 class="fw-semibold mb-0">General Secretary – Hayatian Computing Society</h4>
+          </div>
+          <div class="mb-2 text-primary fw-semibold">University of Gujrat | 2024 – 2025</div>
+          <ul class="small ps-3 mb-0">
+            <li>Led 10+ academic, tech, and social events, engaging 400+ students.</li>
+            <li>Organized inter-departmental coding contests and seminars (200+ participants).</li>
+            <li>Managed logistics for hackathons, FYP expos, and programming tournaments.</li>
           </ul>
         </div>
-        <div class="card p-4 shadow-sm border-start border-4 border-info text-start">
-          <h4 class="fw-semibold">Campus Ambassador – DAIRA'25</h4>
-          <p class="text-muted mb-2">FAST NUCES CFC, Faisalabad | April 2025</p>
-          <ul class="small ps-3">
-            <li>Appointed as lead ambassador to represent UOG in a national tech olympiad.</li>
-            <li>Managed a 50+ members delegation’s full participation including logistics, accommodation, and scheduling.</li>
-            <li>Handled budget operations, ensuring seamless registration, travel, and communication with event coordinators.</li>
+        <div class="card card-modern p-4 border-start border-4 border-info text-start" data-aos="fade-left" data-aos-delay="80">
+          <div class="d-flex align-items-center mb-2">
+            <i class="fa-solid fa-bolt fa-lg gradient-text me-2"></i>
+            <h4 class="fw-semibold mb-0">Campus Ambassador – DAIRA'25</h4>
+          </div>
+          <div class="mb-2 text-info fw-semibold">FAST NUCES CFC, Faisalabad | April 2025</div>
+          <ul class="small ps-3 mb-0">
+            <li>Lead ambassador for UOG at national tech olympiad.</li>
+            <li>Managed 50+ member delegation’s logistics, accommodation, and scheduling.</li>
+            <li>Oversaw budgeting and seamless event registration and travel.</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  <!-- Decorative icon (optional) -->
+  <div style="position:absolute;bottom:-35px;right:-50px;z-index:0;opacity:0.08;">
+    <i class="fa-solid fa-hands-helping fa-7x"></i>
+  </div>
 </section>
 
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section py-5 text-center bg-light">
+<!-- Contact Section - Revamped -->
+<section id="contact" class="section contact-section bg-light text-center position-relative">
   <div class="container">
-    <h2 class="mb-5 fw-bold">Contact Me <span role="img" aria-label="phone">📱</span></h2>
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title gradient-text">Contact Me <span role="img" aria-label="phone">📱</span></h2>
+      <p class="text-muted fs-5">Let's connect for collaboration, projects, or a friendly chat!</p>
+    </div>
     <div class="row justify-content-center g-4">
-
       <!-- Email Card -->
-      <div class="col-md-5">
+      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="0">
         <a href="mailto:zunairkhawajaa@gmail.com" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 rounded-4 transition">
-            <div class="card-body d-flex align-items-center justify-content-start gap-3">
-              <i class="fas fa-envelope fa-2x text-danger"></i>
-              <div class="text-start">
-                <h5 class="mb-1 fw-semibold">Email</h5>
-                <p class="mb-0 small">zunairkhawajaa@gmail.com</p>
-              </div>
+          <div class="card card-modern h-100 border-0 rounded-4 transition d-flex flex-row align-items-center gap-3 px-4 py-3">
+            <i class="fas fa-envelope fa-2x text-danger"></i>
+            <div class="text-start">
+              <h5 class="mb-1 fw-semibold">Email</h5>
+              <p class="mb-0 small">zunairkhawajaa@gmail.com</p>
             </div>
           </div>
         </a>
       </div>
-
       <!-- LinkedIn Card -->
-      <div class="col-md-5">
+      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="60">
         <a href="https://linkedin.com/in/zunair-bin-zubair9059421a3" target="_blank" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0 rounded-4 transition">
-            <div class="card-body d-flex align-items-center justify-content-start gap-3">
-              <i class="fab fa-linkedin fa-2x text-primary"></i>
-              <div class="text-start">
-                <h5 class="mb-1 fw-semibold">LinkedIn</h5>
-                <p class="mb-0 small">linkedin.com/in/zunair-bin-zubair9059421a3</p>
-              </div>
+          <div class="card card-modern h-100 border-0 rounded-4 transition d-flex flex-row align-items-center gap-3 px-4 py-3">
+            <i class="fab fa-linkedin fa-2x text-primary"></i>
+            <div class="text-start">
+              <h5 class="mb-1 fw-semibold">LinkedIn</h5>
+              <p class="mb-0 small">linkedin.com/in/zunair-bin-zubair9059421a3</p>
             </div>
           </div>
         </a>
       </div>
-
+    </div>
+    <!-- Decorative icon (optional) -->
+    <div style="position:absolute;top:-25px;left:-45px;z-index:0;opacity:0.06;">
+      <i class="fa-solid fa-envelope-open-text fa-6x"></i>
     </div>
   </div>
 </section>
 
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: true,
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({ duration: 1000, once: true, offset: 100 });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        if (window.scrollY > 50) {
+          navbar.style.background = 'rgba(255,255,255,0.96)';
+          navbar.style.backdropFilter = 'blur(20px)';
+          navbar.classList.add('shadow-sm');
+        } else {
+          navbar.style.background = 'rgba(15,23,42,0.92)';
+          navbar.classList.remove('shadow-sm');
+        }
+      }
+    });
+
+    // Parallax effect for hero background (desktop only)
+    window.addEventListener('scroll', function() {
+      const hero = document.querySelector('.hero');
+      if (hero && window.innerWidth > 768) {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.25;
+        hero.style.transform = `translateY(${rate}px)`;
+      }
+    });
+
+    // Typing effect for hero title
+    function typeWriter(element, text, speed = 82) {
+      let i = 0;
+      element.textContent = '';
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+    setTimeout(function() {
+      const titleElement = document.querySelector('.hero-title');
+      if (titleElement) {
+        const originalText = "Hey! I'm Zunair Khawaja";
+        typeWriter(titleElement, originalText, 70);
+      }
+    }, 800);
   });
 </script>
-
-<!-- AOS CDN -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
-</script>
-
 </body>
+</html>
