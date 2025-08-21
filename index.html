@@ -1,720 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zunair Bin Zubair - Professional Portfolio showcasing innovative projects and technical expertise" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Zunair Bin Zubair - Professional Portfolio showcasing innovative projects and technical expertise" />
   <meta name="author" content="Zunair Bin Zubair" />
   <meta name="keywords" content="portfolio, developer, designer, professional, projects" />
-  
-  <title>Zunair Bin Zubair | Professional Portfolio</title>
-  
-  <!-- Preload critical fonts -->
+  <title>Zunair Bin Zubair</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Modern font combinations -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap 5.3 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Font Awesome 6 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  
-  <!-- Dev Icons -->
   <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
-  
-  <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Favicon & OG -->
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta property="og:title" content="Zunair Bin Zubair - Portfolio" />
-  <meta property="og:description" content="Explore my work, skills, and projects in web, UI/UX, and software engineering." />
+  <meta property="og:description"
+    content="Explore my work, skills, and projects in web, UI/UX, and software engineering." />
   <meta property="og:image" content="assets/img/og-image.png" />
   <meta property="og:type" content="website" />
-
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Loading Screen -->
   <div class="loading-overlay">
     <div class="loading-spinner"></div>
   </div>
-
-  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top glass-effect" role="navigation" aria-label="Main Navigation">
-    <div class="container">
-      <a class="navbar-brand fw-bold fs-4 logo-text" href="#hero">
-        <i class="fas fa-code me-2"></i>Zunair <span class="gradient-text">Khawaja</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div class="container"><a class="navbar-brand  logo-text" href="#hero"><i
+          class="fas fa-code me-2"></i>zunair 
+          <!-- <span class="gradient-text">Khawaja</span> -->
+        </a><button
+        class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item">
-            <a class="nav-link px-3" href="#hero">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3" href="#about">About</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link px-3" href="#what-i-do">What I Do</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link px-3" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <a class="btn btn-primary btn-sm px-3 py-2 shadow-sm cta-nav-button"
+          <li class="nav-item"><a class="nav-link px-3" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-primary btn-sm px-3 py-2 shadow-sm cta-nav-button"
               href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/" target="_blank"
-              rel="noopener noreferrer">
-              Let's Connect <i class="fab fa-linkedin ms-1"></i>
-            </a>
-          </li>
+              rel="noopener noreferrer">Let's Connect <i class="fab fa-linkedin ms-1"></i></a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Hero Section -->
   <section id="hero" class="hero d-flex align-items-center text-center">
     <div class="container py-5">
-      <!-- Profile Image -->
       <div class="mb-4" data-aos="zoom-in" data-aos-delay="80">
         <div class="profile-image-modern rounded-circle mx-auto shadow-lg"
-          style="background-image: url('assets/img/avatars/zunair.jpeg');
-                 background-size: cover;
-                 background-position: center;"
-          role="img"
-          aria-label="Profile photo of Zunair Khawaja">
+          style="background-image: url('assets/img/avatars/zunair.jpeg'); background-size: cover; background-position: center;"
+          role="img" aria-label="Profile photo of Zunair Bin Zubair">
           <div class="profile-overlay"></div>
         </div>
       </div>
-
       <h1 class="hero-title fw-bold display-4 mb-3" data-aos="fade-up">
-        Hey! I'm <span class="gradient-text">Zunair Bin Zubair</span>
-      </h1>
-      <h2 class="hero-subtitle text-secondary fs-4 mt-2 mb-3" data-aos="fade-up" data-aos-delay="100">
-        Full-Stack Developer | React, Node.js, AI Integration
-      </h2>
-      <p class="text-muted fst-italic mb-2" data-aos="fade-up" data-aos-delay="150">
-        I craft digital solutions that streamline workflows and solve real world problems.
-      </p>
-      <p class="lead mx-auto mb-4" style="max-width: 600px; color: #64748b;" data-aos="fade-up" data-aos-delay="200">
-        I build scalable web & mobile applications. Passionate about crafting solutions.
-      </p>
-      <div class="hero-buttons mt-4" data-aos="fade-up" data-aos-delay="300">
-        <a class="btn btn-primary btn-lg me-3 shadow-lg social-btn"
-          href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/"
-          target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile">
-          <i class="fab fa-linkedin me-2"></i> LinkedIn
-        </a>
-        <a class="btn btn-dark btn-lg shadow-lg social-btn"
-          href="https://github.com/khzunair" target="_blank"
-          rel="noopener" aria-label="Visit GitHub Profile">
-          <i class="fab fa-github me-2"></i> GitHub
-        </a>
-      </div>
-      <div class="scroll-indicator mt-5" data-aos="fade-up" data-aos-delay="430">
-        <a href="#about" class="text-decoration-none">
-          <div class="scroll-arrow">
-            <i class="fas fa-chevron-down"></i>
-          </div>
-        </a>
-      </div>
+        <!-- Hey! I'm  -->
+        <span class="gradient-text">Zunair Bin
+          Zubair</span></h1>
+      <h2 class="hero-subtitle text-secondary fs-4 mt-2 mb-3" data-aos="fade-up" data-aos-delay="100">Software
+        Developer | MERN | AI Integration</h2>
+      <p class="text-muted fst-italic mb-2" data-aos="fade-up" data-aos-delay="150">I craft digital solutions that
+        streamline workflows and solve real world problems.</p>
+      <!-- <p class="lead mx-auto mb-4" style="max-width: 600px; color: #64748b;" data-aos="fade-up" data-aos-delay="200">I
+        build scalable web & mobile applications. Passionate about crafting solutions.</p> -->
+      <div class="hero-buttons mt-4" data-aos="fade-up" data-aos-delay="300"><a
+          class="btn btn-primary btn-lg me-3 shadow-lg social-btn"
+          href="https://www.linkedin.com/in/zunair-bin-zubair-9059421a3/" target="_blank" rel="noopener"
+          aria-label="Visit LinkedIn Profile"><i class="fab fa-linkedin me-2"></i> LinkedIn</a><a
+          class="btn btn-dark btn-lg shadow-lg social-btn" href="https://github.com/khzunair" target="_blank"
+          rel="noopener" aria-label="Visit GitHub Profile"><i class="fab fa-github me-2"></i> GitHub</a></div>
     </div>
   </section>
-
-<!-- About Me Section - Revamped -->
-<section id="about" class="section bg-light position-relative">
-  <div class="container">
-    <!-- Section Heading -->
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title gradient-text">About Me</h2>
-      <p class="text-muted fs-5">Discover my passion, skills, and vision for impactful digital solutions.</p>
+  <div style="position:absolute;top:-35px;left:-60px;z-index:0;opacity:0.07;"><i class="fas fa-lightbulb fa-7x"></i>
+  </div>
+  </section>
+  <section id="skills" class="section skills-section bg-light text-center">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title gradient-text">Skills <span role="img" aria-label="fire">🔥</span></h2>
+        <p class="text-muted fs-5">Technologies, tools & frameworks I use for building powerful products.</p>
+      </div>
+      <div id="skills-container" class="row justify-content-center g-3"></div>
     </div>
-    <div class="row justify-content-center align-items-center">
-      <!-- Profile Photo -->
-      <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="zoom-in">
-        <div class="profile-image-modern mx-auto" style="
-          width: 220px;
-          height: 220px;
-          background-image: url('assets/img/avatars/graduation.png');
-          background-size: cover;
-          background-position: center;
-          border: 5px solid var(--primary-color);
-          box-shadow: 0 14px 36px rgba(99,102,241,0.22);
-        ">
-          <div class="profile-overlay"></div>
-        </div>
-      </div>
-      <!-- Details List -->
-      <div class="col-md-7" data-aos="fade-left" data-aos-delay="120">
-        <ul class="list-unstyled fs-5 text-secondary" style="line-height: 1.8;">
-          <li class="mb-4 d-flex align-items-start">
-            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-code-slash"></i></span>
-            <span>
-              Computer Science graduate transforming <span class="fw-bold gradient-text">ideas into scalable digital products</span> with MERN stack, AI, and robust architecture.
-            </span>
-          </li>
-          <li class="mb-4 d-flex align-items-start">
-            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-laptop"></i></span>
-            <span>
-              Passionate about crafting <span class="fw-bold gradient-text">APIs, microservices, and mobile-first UIs</span> that solve problems and delight users.
-            </span>
-          </li>
-          <li class="mb-4 d-flex align-items-start">
-            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-robot"></i></span>
-            <span>
-              Skilled in <span class="fw-bold gradient-text">AI/ML integration</span>, RESTful APIs, and platforms like TensorFlow, Flask, and third-party automations.
-            </span>
-          </li>
-          <li class="mb-4 d-flex align-items-start">
-            <span class="me-3 gradient-text" style="font-size:2.2rem;"><i class="bi bi-people"></i></span>
-            <span>
-              Committed to <span class="fw-bold gradient-text">continuous learning, agile teamwork, and rapid delivery</span> in dynamic environments.
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- Decorative Shape (optional) -->
-  <div style="position:absolute;bottom:-40px;right:-60px;z-index:0;opacity:0.07;">
-    <i class="fas fa-graduation-cap fa-7x"></i>
-  </div>
-</section>
-
-  </div>
-  <!-- Decorative Shape (optional) -->
-  <div style="position:absolute;top:-35px;left:-60px;z-index:0;opacity:0.07;">
-    <i class="fas fa-lightbulb fa-7x"></i>
-  </div>
-</section> -->
-
-<!-- Skills Section - Revamped -->
-<section id="skills" class="section skills-section bg-light text-center">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title gradient-text">Skills <span role="img" aria-label="fire">🔥</span></h2>
-      <p class="text-muted fs-5">Technologies, tools & frameworks I master for building powerful products.</p>
-    </div>
-    <div class="row justify-content-center g-3">
-      <!-- FRONTEND -->
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="0">
-        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">React</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="40">
-        <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">React Native</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="80">
-        <i class="devicon-redux-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">Redux</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="120">
-        <i class="devicon-nextjs-original-wordmark" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">Next.js</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="160">
-        <img src="https://cdn.worldvectorlogo.com/logos/material-ui-1.svg" alt="Material UI" style="height: 3rem;" />
-        <p class="mt-2 fw-semibold text-secondary">Material UI</p>
-      </div>
-      <!-- BACKEND -->
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="200">
-        <i class="devicon-nodejs-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">Node.js</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="240">
-        <i class="devicon-express-original" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">Express</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="280">
-        <i class="devicon-flask-original" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">Flask</p>
-      </div>
-      <!-- DATABASES -->
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="320">
-        <i class="devicon-mongodb-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">MongoDB</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="360">
-        <i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">SQL</p>
-      </div>
-      <!-- CORE -->
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="400">
-        <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">JavaScript</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="440">
-        <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">HTML5</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="480">
-        <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">CSS3</p>
-      </div>
-      <!-- TOOLS -->
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="520">
-        <i class="devicon-git-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">Git</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="560">
-        <i class="devicon-fastapi-plain colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">REST APIs</p>
-      </div>
-      <!-- AI / ML TOOLS -->
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="600">
-        <i class="devicon-tensorflow-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">TensorFlow</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="640">
-        <i class="devicon-keras-original colored" style="font-size: 3rem;"></i>
-        <p class="mt-2 fw-semibold text-secondary">Keras</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="680">
-        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 3rem; object-fit: contain;" />
-        <p class="mt-2 fw-semibold text-secondary">Hugging Face</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="720">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" style="height: 3rem; object-fit: contain;" />
-        <p class="mt-2 fw-semibold text-secondary">NumPy</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="760">
-        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn" style="height: 3rem;" />
-        <p class="mt-2 fw-semibold text-secondary">scikit-learn</p>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="800">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="MobileNetV2" style="height: 3rem; object-fit: contain;" />
-        <p class="mt-2 fw-semibold text-secondary">MobileNetV2</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Experience Section - Revamped -->
+  </section>
 <section id="experience" class="section experience-section bg-light text-center">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title gradient-text">Working Experience <span role="img" aria-label="briefcase">💼</span></h2>
-      <p class="text-muted fs-5">Professional journey from SaaS platforms to medical portals.</p>
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title gradient-text">Working Experience <span role="img" aria-label="briefcase">💼</span>
+            </h2>
+            <p class="text-muted fs-5">Professional journey from SaaS platforms to medical portals.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10" id="experience-container">
+                <!-- Experience cards will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <!-- Imam Organization -->
-        <div class="card card-modern mb-5 p-4 text-start" data-aos="fade-up" data-aos-delay="0">
-          <div class="d-flex align-items-center mb-2">
-            <i class="fa-solid fa-building fa-lg gradient-text me-2"></i>
-            <h4 class="fw-bold mb-0">Software Developer – Imam Organization</h4>
-          </div>
-          <div class="mb-2 text-primary fw-semibold">Nov 2024 – Jan 2025 | Remote (UK)</div>
-          <ul class="mb-0">
-            <li>Built a School Management System serving 500+ users with attendance, grading, and user roles.</li>
-            <li>Designed secure multi-role authentication (JWT): Admin, Teacher, Student, Family.</li>
-            <li>Integrated AWS S3 & Cloudinary for scalable media delivery, reducing latency by 60%.</li>
-            <li>Automated grading/reporting workflows, saving ~2 hrs/week via online test systems.</li>
-          </ul>
-        </div>
-        <!-- NextGen Cure -->
-        <div class="card card-modern mb-5 p-4 text-start" data-aos="fade-up" data-aos-delay="80">
-          <div class="d-flex align-items-center mb-2">
-            <i class="fa-solid fa-flask fa-lg gradient-text me-2"></i>
-            <h4 class="fw-bold mb-0">Software Developer Intern – NextGen Cure</h4>
-          </div>
-          <div class="mb-2 text-primary fw-semibold">Nov 2023 – Apr 2024 | UOG Business Incubation Center</div>
-          <ul class="mb-0">
-            <li>Developed React Native app screens; managed state with Redux Toolkit.</li>
-            <li>Created scalable RESTful APIs in Node.js and enabled real-time frontend/backend integration.</li>
-            <li>Collaborated on Git-based version control and contributed to QA and deployment cycles.</li>
-          </ul>
-        </div>
-        <!-- MedEdPort -->
-        <div class="card card-modern p-4 text-start" data-aos="fade-up" data-aos-delay="160">
-          <div class="d-flex align-items-center mb-2">
-            <i class="fa-solid fa-user-md fa-lg gradient-text me-2"></i>
-            <h4 class="fw-bold mb-0">Full Stack Developer – MedEdPort</h4>
-          </div>
-          <div class="mb-2 text-primary fw-semibold">Sep 2023 – Dec 2024 | Remote (USA)</div>
-          <ul class="mb-0">
-            <li>Architected a real-time medical portal for professionals using MERN stack and JWT auth.</li>
-            <li>Optimized media architecture via Cloudinary; reduced upload latency by 40%.</li>
-            <li>Set up CI/CD via Heroku; led end-to-end SDLC including planning, execution, and delivery.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Decorative background icon (optional) -->
-  <div style="position:absolute;bottom:-40px;right:-60px;z-index:0;opacity:0.08;">
-    <i class="fa-solid fa-briefcase fa-7x"></i>
-  </div>
+    <div style="position:absolute;bottom:-40px;right:-60px;z-index:0;opacity:0.08;"><i
+            class="fa-solid fa-briefcase fa-7x"></i></div>
 </section>
-
-
-<!-- Projects Section - Revamped, Premium UI -->
-<section id="projects" class="section bg-light text-center position-relative">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title gradient-text">Featured Projects <span role="img" aria-label="laptop">💻</span></h2>
-      <p class="text-muted fs-5">Showcasing my most impactful work in AI, SaaS, and digital products.</p>
-    </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-      <!-- Planteria – Highlighted Project -->
-      <div class="col" data-aos="zoom-in" data-aos-delay="0">
-        <div class="card card-modern h-100 border-0 shadow-lg position-relative">
-          <div class="project-img-wrapper position-relative">
-            <img src="./assets/img/nature/planteria.png" alt="Planteria App" class="img-fluid rounded-top" loading="lazy">
-            <span class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2" style="background: var(--gradient-primary); color: #fff; font-weight: 600;">🌿 Featured</span>
-          </div>
-          <div class="card-body text-start">
-            <h4 class="card-title fw-bold gradient-text">Planteria – AI Plant Disease Detection</h4>
-            <p class="card-text small">
-              AI-powered mobile app using MobileNetV2 to identify plant diseases from images (96% accuracy). Integrated e-commerce for gardening supplies, empowering vendors and community-based micro-entrepreneurship.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-3">
-              <span class="badge bg-dark">React Native</span>
-              <span class="badge bg-secondary">Flask</span>
-              <span class="badge bg-success">Node.js</span>
-              <span class="badge bg-warning text-dark">MongoDB</span>
-              <span class="badge bg-info text-dark">TensorFlow</span>
-              <span class="badge bg-primary">Gemini AI</span>
+  <section id="projects" class="section bg-light text-center position-relative">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title gradient-text">Featured Projects <span role="img" aria-label="laptop">💻</span></h2>
+        <p class="text-muted fs-5">Showcasing my most impactful work in AI, SaaS, and digital products.</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col" data-aos="zoom-in" data-aos-delay="0">
+          <div class="card card-modern h-100 border-0 shadow-lg position-relative">
+            <div class="project-img-wrapper position-relative"><img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="./assets/img/nature/planteria.png" alt="Planteria App"
+                class="img-fluid rounded-top lazyload"><span
+                class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2"
+                style="background: var(--gradient-primary); color: #fff; font-weight: 600;">🌿 Featured</span></div>
+            <div class="card-body text-start">
+              <h4 class="card-title fw-bold gradient-text">Planteria – AI Plant Disease Detection</h4>
+              <p class="card-text small">AI-powered mobile app using MobileNetV2 to identify plant diseases from images
+                (96% accuracy). Integrated e-commerce for gardening supplies, empowering vendors and community-based
+                micro-entrepreneurship.</p>
+              <div class="d-flex flex-wrap gap-2 mt-3"><span class="badge bg-dark">React Native</span><span
+                  class="badge bg-secondary">Flask</span><span class="badge bg-success">Node.js</span><span
+                  class="badge bg-warning text-dark">MongoDB</span><span
+                  class="badge bg-info text-dark">TensorFlow</span><span class="badge bg-primary">Gemini AI</span></div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- HireFlow – Highlighted Project -->
-      <div class="col" data-aos="zoom-in" data-aos-delay="60">
-        <div class="card card-modern h-100 border-0 shadow-lg position-relative">
-          <div class="project-img-wrapper position-relative">
-            <img src="./assets/img/nature/HireFlow.png" alt="HireFlow App" class="img-fluid rounded-top" loading="lazy">
-            <span class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2" style="background: var(--gradient-primary); color: #fff; font-weight: 600;">🚀 Hackathon Winner</span>
-          </div>
-          <div class="card-body text-start">
-            <h4 class="card-title fw-bold gradient-text">HireFlow – AI Resume Screening Platform</h4>
-            <p class="card-text small">
-              SaaS tool to automate resume screening. Uses PDF parsing, RAG, and human-like summaries for candidate fit analysis—revolutionizing recruitment pipelines for modern hiring.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-3">
-              <span class="badge bg-dark">React</span>
-              <span class="badge bg-secondary">Flask</span>
-              <span class="badge bg-success">Node.js</span>
-              <span class="badge bg-warning text-dark">MongoDB</span>
-              <span class="badge bg-info text-dark">PyMuPDF</span>
-              <span class="badge bg-primary">Gemini AI</span>
-              <span class="badge bg-danger">RAG</span>
+        <div class="col" data-aos="zoom-in" data-aos-delay="60">
+          <div class="card card-modern h-100 border-0 shadow-lg position-relative">
+            <div class="project-img-wrapper position-relative"><img
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="./assets/img/nature/HireFlow.png" alt="HireFlow App"
+                class="img-fluid rounded-top lazyload"><span
+                class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2"
+                style="background: var(--gradient-primary); color: #fff; font-weight: 600;">🚀 Google Developer
+                Hackathon</span></div>
+            <div class="card-body text-start">
+              <h4 class="card-title fw-bold gradient-text">HireFlow – AI Resume Screening Platform</h4>
+              <p class="card-text small">SaaS tool to automate resume screening. Uses PDF parsing, RAG, and human-like
+                summaries for candidate fit analysis—revolutionizing recruitment pipelines for modern hiring.</p>
+              <div class="d-flex flex-wrap gap-2 mt-3"><span class="badge bg-dark">React</span><span
+                  class="badge bg-secondary">Flask</span><span class="badge bg-success">Node.js</span><span
+                  class="badge bg-warning text-dark">MongoDB</span><span
+                  class="badge bg-info text-dark">PyMuPDF</span><span class="badge bg-primary">Gemini AI</span><span
+                  class="badge bg-danger">RAG</span></div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- MedEdPort -->
-      <div class="col" data-aos="fade-up" data-aos-delay="120">
-        <div class="card card-modern h-100 border-0 shadow position-relative">
-          <div class="project-img-wrapper">
-            <img src="./assets/img/nature/meded.png" alt="Mededport" class="img-fluid rounded-top" loading="lazy">
-          </div>
-          <div class="card-body text-start">
-            <h4 class="card-title gradient-text fw-bold">MedEdPort – Doctors Portal</h4>
-            <p class="card-text small">
-              Real-time educational portal for doctors. Implements secure JWT authentication, Cloudinary media uploads, and full CI/CD deployment for reliability.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <span class="badge bg-dark">React</span>
-              <span class="badge bg-secondary">Node.js</span>
-              <span class="badge bg-success">MongoDB</span>
-              <span class="badge bg-info text-dark">Cloudinary</span>
-              <span class="badge bg-warning text-dark">JWT</span>
+        <div class="col" data-aos="fade-up" data-aos-delay="120">
+          <div class="card card-modern h-100 border-0 shadow position-relative">
+            <div class="project-img-wrapper"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="./assets/img/nature/meded.png" alt="Mededport" class="img-fluid rounded-top lazyload"></div>
+            <div class="card-body text-start">
+              <h4 class="card-title gradient-text fw-bold">MedEdPort – Doctors Portal</h4>
+              <p class="card-text small">Real-time educational portal for doctors. Implements secure JWT authentication,
+                Cloudinary media uploads, and full CI/CD deployment for reliability.</p>
+              <div class="d-flex flex-wrap gap-2 mt-2"><span class="badge bg-dark">React</span><span
+                  class="badge bg-secondary">Node.js</span><span class="badge bg-success">MongoDB</span><span
+                  class="badge bg-info text-dark">Cloudinary</span><span class="badge bg-warning text-dark">JWT</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- News App -->
-      <div class="col" data-aos="fade-up" data-aos-delay="180">
-        <div class="card card-modern h-100 border-0 shadow position-relative">
-          <div class="project-img-wrapper">
-            <img src="./assets/img/nature/news app.png" alt="News App" class="img-fluid rounded-top" loading="lazy">
-          </div>
-          <div class="card-body text-start">
-            <h4 class="card-title gradient-text fw-bold">News App</h4>
-            <p class="card-text small">
-              Aggregates real-time news headlines from multiple countries and categories via NewsAPI, with source/category filters, bookmarks, and read-later features.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <span class="badge bg-dark">React</span>
-              <span class="badge bg-secondary">NewsAPI</span>
-              <span class="badge bg-success">Bootstrap</span>
+        <div class="col" data-aos="fade-up" data-aos-delay="180">
+          <div class="card card-modern h-100 border-0 shadow position-relative">
+            <div class="project-img-wrapper"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="./assets/img/nature/news app.png" alt="News App" class="img-fluid rounded-top lazyload"></div>
+            <div class="card-body text-start">
+              <h4 class="card-title gradient-text fw-bold">News App</h4>
+              <p class="card-text small">Aggregates real-time news headlines from multiple countries and categories via
+                NewsAPI, with source/category filters, bookmarks, and read-later features.</p>
+              <div class="d-flex flex-wrap gap-2 mt-2"><span class="badge bg-dark">React</span><span
+                  class="badge bg-secondary">NewsAPI</span><span class="badge bg-success">Bootstrap</span></div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Convo Panda -->
-      <div class="col" data-aos="fade-up" data-aos-delay="240">
-        <div class="card card-modern h-100 border-0 shadow position-relative">
-          <div class="project-img-wrapper">
-            <img src="./assets/img/nature/convo-panda.jpeg" alt="Convo Panda" class="img-fluid rounded-top" loading="lazy">
-          </div>
-          <div class="card-body text-start">
-            <h4 class="card-title gradient-text fw-bold">Convo Panda</h4>
-            <p class="card-text small">
-              Social messaging web app with private/group chat, friend requests, and real-time communication. Built with scalable, community-driven architecture.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <span class="badge bg-dark">React</span>
-              <span class="badge bg-success">Socket.IO</span>
-              <span class="badge bg-secondary">Node.js</span>
+        <div class="col" data-aos="fade-up" data-aos-delay="240">
+          <div class="card card-modern h-100 border-0 shadow position-relative">
+            <div class="project-img-wrapper"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="./assets/img/nature/convo-panda.jpeg" alt="Convo Panda"
+                class="img-fluid rounded-top lazyload"></div>
+            <div class="card-body text-start">
+              <h4 class="card-title gradient-text fw-bold">Convo Panda</h4>
+              <p class="card-text small">Social messaging web app with private/group chat, friend requests, and
+                real-time communication. Built with scalable, community-driven architecture.</p>
+              <div class="d-flex flex-wrap gap-2 mt-2"><span class="badge bg-dark">React</span><span
+                  class="badge bg-success">Socket.IO</span><span class="badge bg-secondary">Node.js</span></div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Netflix Clone -->
-      <div class="col" data-aos="fade-up" data-aos-delay="300">
-        <div class="card card-modern h-100 border-0 shadow position-relative">
-          <div class="project-img-wrapper">
-            <img src="./assets/img/nature/netflix clone.png" alt="Netflix Clone" class="img-fluid rounded-top" loading="lazy">
-          </div>
-          <div class="card-body text-start">
-            <h4 class="card-title gradient-text fw-bold">Netflix UI Clone</h4>
-            <p class="card-text small">
-              Netflix UI rebuilt with browse by category, real-time previews, and movie detail modals using TMDB API and Firebase backend.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <span class="badge bg-dark">React</span>
-              <span class="badge bg-danger">Firebase</span>
-              <span class="badge bg-warning text-dark">TMDB API</span>
+        <div class="col" data-aos="fade-up" data-aos-delay="300">
+          <div class="card card-modern h-100 border-0 shadow position-relative">
+            <div class="project-img-wrapper"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="./assets/img/nature/netflix clone.png" alt="Netflix Clone"
+                class="img-fluid rounded-top lazyload"></div>
+            <div class="card-body text-start">
+              <h4 class="card-title gradient-text fw-bold">Netflix UI Clone</h4>
+              <p class="card-text small">Netflix UI rebuilt with browse by category, real-time previews, and movie
+                detail modals using TMDB API and Firebase backend.</p>
+              <div class="d-flex flex-wrap gap-2 mt-2"><span class="badge bg-dark">React</span><span
+                  class="badge bg-warning text-dark">TMDB API</span></div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- CMS Darntl -->
-      <div class="col" data-aos="fade-up" data-aos-delay="360">
-        <div class="card card-modern h-100 border-0 shadow border-warning border-2 position-relative">
-          <div class="project-img-wrapper">
-            <img src="./assets/img/nature/bussiness analyical.png" alt="CMS Darntl" class="img-fluid rounded-top" loading="lazy">
-          </div>
-          <div class="card-body text-start">
-            <h4 class="card-title gradient-text fw-bold">CMS Darntl – Contact Management System</h4>
-            <p class="card-text small">
-              <span class="badge bg-secondary mb-2">First Freelance Project 🎉</span><br>
-              Business contact management tool with PDF & spreadsheet report generation for actionable insights.
-            </p>
-            <div class="d-flex flex-wrap gap-2 mt-2">
-              <span class="badge bg-dark">Spring Boot</span>
-              <span class="badge bg-success">MySQL</span>
-              <span class="badge bg-primary">React.js</span>
-              <span class="badge bg-warning text-dark">PDF Gen</span>
-              <span class="badge bg-info text-dark">Excel Export</span>
+        <div class="col" data-aos="fade-up" data-aos-delay="360">
+          <div class="card card-modern h-100 border-0 shadow border-warning border-2 position-relative">
+            <div class="project-img-wrapper"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                data-src="./assets/img/nature/bussiness analyical.png" alt="CMS Darntl"
+                class="img-fluid rounded-top lazyload"></div>
+            <div class="card-body text-start">
+              <h4 class="card-title gradient-text fw-bold">CMS Darntl – Contact Management System</h4>
+              <p class="card-text small"><span class="badge bg-secondary mb-2">First Freelance Project
+                  🎉</span><br>Business contact management tool with PDF & spreadsheet report generation for actionable
+                insights.</p>
+              <div class="d-flex flex-wrap gap-2 mt-2"><span class="badge bg-dark">Spring Boot</span><span
+                  class="badge bg-success">MySQL</span><span class="badge bg-primary">React.js</span><span
+                  class="badge bg-warning text-dark">PDF Gen</span><span class="badge bg-info text-dark">Excel
+                  Export</span></div>
             </div>
           </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- Decorative background icon (optional) -->
-  <div style="position:absolute;top:-40px;left:-55px;z-index:0;opacity:0.06;pointer-events:none;">
-    <i class="fa-solid fa-laptop-code fa-7x"></i>
-  </div>
-</section>
-
-
-<!-- Volunteer & Leadership Section - Revamped -->
-<section id="volunteer" class="section volunteer-section bg-light text-center position-relative">
-  <!-- Watermark Background -->
-  <div style="
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://cdn-icons-png.flaticon.com/512/4128/4128176.png') no-repeat center center;
-    background-size: 30%;
-    opacity: 0.05;
-    z-index: 0;
-    pointer-events: none;
-  "></div>
-  <div class="container position-relative" style="z-index: 1;">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title gradient-text">Volunteer & Leadership</h2>
-      <p class="text-muted fs-5">Community impact, event leadership, and team building.</p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <div class="card card-modern p-4 mb-5 border-start border-4 border-primary text-start" data-aos="fade-right">
-          <div class="d-flex align-items-center mb-2">
-            <i class="fa-solid fa-users fa-lg gradient-text me-2"></i>
-            <h4 class="fw-semibold mb-0">General Secretary – Hayatian Computing Society</h4>
-          </div>
-          <div class="mb-2 text-primary fw-semibold">University of Gujrat | 2024 – 2025</div>
-          <ul class="small ps-3 mb-0">
-            <li>Led 10+ academic, tech, and social events, engaging 400+ students.</li>
-            <li>Organized inter-departmental coding contests and seminars (200+ participants).</li>
-            <li>Managed logistics for hackathons, FYP expos, and programming tournaments.</li>
-          </ul>
-        </div>
-        <div class="card card-modern p-4 border-start border-4 border-info text-start" data-aos="fade-left" data-aos-delay="80">
-          <div class="d-flex align-items-center mb-2">
-            <i class="fa-solid fa-bolt fa-lg gradient-text me-2"></i>
-            <h4 class="fw-semibold mb-0">Campus Ambassador – DAIRA'25</h4>
-          </div>
-          <div class="mb-2 text-info fw-semibold">FAST NUCES CFC, Faisalabad | April 2025</div>
-          <ul class="small ps-3 mb-0">
-            <li>Lead ambassador for UOG at national tech olympiad.</li>
-            <li>Managed 50+ member delegation’s logistics, accommodation, and scheduling.</li>
-            <li>Oversaw budgeting and seamless event registration and travel.</li>
-          </ul>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Decorative icon (optional) -->
-  <div style="position:absolute;bottom:-35px;right:-50px;z-index:0;opacity:0.08;">
-    <i class="fa-solid fa-hands-helping fa-7x"></i>
-  </div>
-</section>
-
-<!-- Contact Section - Revamped -->
-<section id="contact" class="section contact-section bg-light text-center position-relative">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title gradient-text">Contact Me <span role="img" aria-label="phone">📱</span></h2>
-      <p class="text-muted fs-5">Let's connect for collaboration, projects, or a friendly chat!</p>
+    <div style="position:absolute;top:-40px;left:-55px;z-index:0;opacity:0.06;pointer-events:none;"><i
+        class="fa-solid fa-laptop-code fa-7x"></i></div>
+  </section>
+  <section id="volunteer" class="section volunteer-section bg-light text-center position-relative">
+    <div
+      style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url('https://cdn-icons-png.flaticon.com/512/4128/4128176.png') no-repeat center center;background-size: 30%;opacity: 0.05;z-index: 0;pointer-events: none;">
     </div>
-    <div class="row justify-content-center g-4">
-      <!-- Email Card -->
-      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="0">
-        <a href="mailto:zunairkhawajaa@gmail.com" class="text-decoration-none text-dark">
-          <div class="card card-modern h-100 border-0 rounded-4 transition d-flex flex-row align-items-center gap-3 px-4 py-3">
-            <i class="fas fa-envelope fa-2x text-danger"></i>
-            <div class="text-start">
-              <h5 class="mb-1 fw-semibold">Email</h5>
-              <p class="mb-0 small">zunairkhawajaa@gmail.com</p>
-            </div>
-          </div>
-        </a>
+    <div class="container position-relative" style="z-index: 1;">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title gradient-text">Volunteer & Leadership</h2>
+        <p class="text-muted fs-5">Community impact, event leadership, and team building.</p>
       </div>
-      <!-- LinkedIn Card -->
-      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="60">
-        <a href="https://linkedin.com/in/zunair-bin-zubair9059421a3" target="_blank" class="text-decoration-none text-dark">
-          <div class="card card-modern h-100 border-0 rounded-4 transition d-flex flex-row align-items-center gap-3 px-4 py-3">
-            <i class="fab fa-linkedin fa-2x text-primary"></i>
-            <div class="text-start">
-              <h5 class="mb-1 fw-semibold">LinkedIn</h5>
-              <p class="mb-0 small">linkedin.com/in/zunair-bin-zubair9059421a3</p>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="card card-modern p-4 mb-5 border-start border-4 border-primary text-start" data-aos="fade-right">
+            <div class="d-flex align-items-center mb-2"><i class="fa-solid fa-users fa-lg gradient-text me-2"></i>
+              <h4 class="fw-semibold mb-0">General Secretary – Hayatian Computing Society</h4>
             </div>
+            <div class="mb-2 text-primary fw-semibold">University of Gujrat | 2024 – 2025</div>
+            <ul class="small ps-3 mb-0">
+              <li>Led 10+ academic, tech, and social events, engaging 400+ students.</li>
+              <li>Organized inter-departmental coding contests and seminars (200+ participants).</li>
+              <li>Managed logistics for hackathons, FYP expos, and programming tournaments.</li>
+            </ul>
           </div>
-        </a>
+          <div class="card card-modern p-4 border-start border-4 border-info text-start" data-aos="fade-left"
+            data-aos-delay="80">
+            <div class="d-flex align-items-center mb-2"><i class="fa-solid fa-bolt fa-lg gradient-text me-2"></i>
+              <h4 class="fw-semibold mb-0">Campus Ambassador – DAIRA'25</h4>
+            </div>
+            <div class="mb-2 text-info fw-semibold">FAST NUCES CFC, Faisalabad | April 2025</div>
+            <ul class="small ps-3 mb-0">
+              <li>Lead ambassador for UOG at national tech olympiad.</li>
+              <li>Managed 50+ member delegation’s logistics, accommodation, and scheduling.</li>
+              <li>Oversaw budgeting and seamless event registration and travel.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Decorative icon (optional) -->
-    <div style="position:absolute;top:-25px;left:-45px;z-index:0;opacity:0.06;">
-      <i class="fa-solid fa-envelope-open-text fa-6x"></i>
+    <div style="position:absolute;bottom:-35px;right:-50px;z-index:0;opacity:0.08;"><i
+        class="fa-solid fa-hands-helping fa-7x"></i></div>
+  </section>
+  <section id="contact" class="section contact-section bg-light text-center position-relative">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title gradient-text">Contact Me <span role="img" aria-label="phone">📱</span></h2>
+        <p class="text-muted fs-5">Let's connect for collaboration, projects, or a friendly chat!</p>
+      </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-5" data-aos="zoom-in" data-aos-delay="0"><a href="mailto:zunairkhawajaa@gmail.com"
+            class="text-decoration-none text-dark">
+            <div
+              class="card card-modern h-100 border-0 rounded-4 transition d-flex flex-row align-items-center gap-3 px-4 py-3">
+              <i class="fas fa-envelope fa-2x text-danger"></i>
+              <div class="text-start">
+                <h5 class="mb-1 fw-semibold">Email</h5>
+                <p class="mb-0 small">zunairkhawajaa@gmail.com</p>
+              </div>
+            </div>
+          </a></div>
+        <div class="col-md-5" data-aos="zoom-in" data-aos-delay="60"><a
+            href="https://linkedin.com/in/zunair-bin-zubair9059421a3" target="_blank"
+            class="text-decoration-none text-dark">
+            <div
+              class="card card-modern h-100 border-0 rounded-4 transition d-flex flex-row align-items-center gap-3 px-4 py-3">
+              <i class="fab fa-linkedin fa-2x text-primary"></i>
+              <div class="text-start">
+                <h5 class="mb-1 fw-semibold">LinkedIn</h5>
+                <p class="mb-0 small">linkedin.com/in/zunair-bin-zubair9059421a3</p>
+              </div>
+            </div>
+          </a></div>
+      </div>
+      <div style="position:absolute;top:-25px;left:-45px;z-index:0;opacity:0.06;"><i
+          class="fa-solid fa-envelope-open-text fa-6x"></i></div>
     </div>
-  </div>
-</section>
-
- <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS
-    AOS.init({ duration: 1000, once: true, offset: 100 });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-          // Update active class on click
-          document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-          this.classList.add('active');
-        }
-      });
-    });
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (navbar) {
-        if (window.scrollY > 50) {
-          navbar.style.background = 'rgba(255,255,255,0.96)';
-          navbar.style.backdropFilter = 'blur(20px)';
-          navbar.classList.add('shadow-sm');
-        } else {
-          navbar.style.background = 'rgba(15,23,42,0.92)';
-          navbar.classList.remove('shadow-sm');
-        }
-      }
-    });
-
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', function() {
-      let scrollPos = window.scrollY + 150; // offset so it's accurate
-
-      sections.forEach(section => {
-        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-          let id = section.getAttribute('id');
-          document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-          document.querySelector(`.nav-link[href="#${id}"]`)?.classList.add('active');
-        }
-      });
-    });
-
-    // Parallax effect for hero background (desktop only)
-    window.addEventListener('scroll', function() {
-      const hero = document.querySelector('.hero');
-      if (hero && window.innerWidth > 768) {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.25;
-        hero.style.transform = `translateY(${rate}px)`;
-      }
-    });
-
-    // Typing effect for hero title
-    function typeWriter(element, text, speed = 82) {
-      let i = 0;
-      element.textContent = '';
-      function type() {
-        if (i < text.length) {
-          element.textContent += text.charAt(i);
-          i++;
-          setTimeout(type, speed);
-        }
-      }
-      type();
-    }
-    setTimeout(function() {
-      const titleElement = document.querySelector('.hero-title');
-      if (titleElement) {
-        const originalText = "Hey! I'm Zunair Khawaja";
-        typeWriter(titleElement, originalText, 70);
-      }
-    }, 800);
-  });
-</script>
-
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
