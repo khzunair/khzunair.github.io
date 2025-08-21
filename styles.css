@@ -328,6 +328,10 @@ h6 {
   color: var(--primary-color);
   background: rgba(255, 255, 255, 0.11);
 }
+
+.emoji {
+    color: initial !important; 
+}
 @keyframes bounce {
   0%,
   20%,

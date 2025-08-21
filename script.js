@@ -221,25 +221,25 @@ document.addEventListener("DOMContentLoaded", function () {
             duration: "Nov 2024 – Jan 2025 | Remote (UK)",
             icon: "fa-solid fa-building",
             responsibilities: [
-                "Built a School Management System serving 500+ users with attendance, grading, and user roles.",
+                "Built a School Management System serving users with attendance, grading, and user roles.",
                 "Designed secure multi-role authentication (JWT): Admin, Teacher, Student, Family.",
-                "Integrated AWS S3 & Cloudinary for scalable media delivery, reducing latency by 60%.",
+                "Integrated AWS S3 & Cloudinary for scalable media delivery, reducing latency.",
                 "Automated grading/reporting workflows, saving ~2 hrs/week via online test systems.",
             ],
             aosDelay: 0
         },
-        {
-            company: "NextGen Cure",
-            title: "Software Developer Intern",
-            duration: "Nov 2023 – Apr 2024 | UOG Business Incubation Center",
-            icon: "fa-solid fa-flask",
-            responsibilities: [
-                "Developed React Native app screens; managed state with Redux Toolkit.",
-                "Created scalable RESTful APIs in Node.js and enabled real-time frontend/backend integration.",
-                "Collaborated on Git-based version control and contributed to QA and deployment cycles.",
-            ],
-            aosDelay: 80
-        },
+        // {
+        //     company: "NextGen Cure",
+        //     title: "Software Developer Intern",
+        //     duration: "Nov 2023 – Apr 2024 | UOG Business Incubation Center",
+        //     icon: "fa-solid fa-flask",
+        //     responsibilities: [
+        //         "Developed React Native app screens; managed state across application.",
+        //         "Created RESTful APIs in Node.js and enabled real-time frontend/backend integration.",
+        //         "Collaborated on Git-based version control and contributed to QA and deployment cycles.",
+        //     ],
+        //     aosDelay: 80
+        // },
         {
             company: "MedEdPort",
             title: "Full Stack Developer",
