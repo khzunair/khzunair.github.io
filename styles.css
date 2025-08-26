@@ -508,19 +508,16 @@ h6 {
 }
 
 .project-img-wrapper img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   object-fit: cover;
   transition: var(--transition-slow);
 }
 
-.card-modern:hover .project-img-wrapper img {
-  transform: scale(1.1);
-}
 
 .badge {
   font-weight: 500;
-  padding: 0.5rem 0.8rem;
+  /* padding: 0.5rem 0.8rem; */
   border-radius: 20px;
 }
 
@@ -758,4 +755,60 @@ button:focus {
   color: initial !important; 
   display: inline-block;
   animation: pulse 2s infinite;
+}
+
+
+/* Only add or change the following for project buttons/card spacing */
+.project-action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+  margin-top: auto;
+  margin-bottom: 0;
+  align-items: center;
+  text-align: center;
+}
+.project-action-btn {
+  background: var(--gradient-primary) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 22px;
+  padding: 0.35rem 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-medium);
+  font-size: 0.96rem;
+  display: flex;
+  align-items: center;
+  gap: 0.38em;
+  outline: none !important;
+  white-space: nowrap;
+  min-width: 80px;
+  min-height: 36px;
+}
+.project-action-btn:hover,
+.project-action-btn:focus {
+  background: var(--gradient-secondary) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow-heavy);
+  transform: translateY(-2px) scale(1.04);
+}
+@media (max-width: 767px) {
+  .project-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.38em;
+  }
+}
+.card.card-modern .card-title {
+  font-size: 1.11rem;
+  margin-bottom: 0.15rem;
+}
+.card.card-modern .card-text {
+  font-size: 0.98rem;
+}
+.card.card-modern {
+  min-height: 250px;
+  padding-bottom: 0.5rem;
 }

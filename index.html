@@ -7,8 +7,9 @@
   <meta name="description"
     content="Zunair Bin Zubair - Professional Portfolio showcasing innovative projects and technical expertise" />
   <meta name="author" content="Zunair Bin Zubair" />
-  <meta name="keywords" content="portfolio, developer, designer, professional, projects, MERN, AI Integration" />
-  <title>Zunair Bin Zubair - Software Developer | MERN | AI Integration</title>
+  <meta name="keywords"
+    content="portfolio, developer, designer, professional, projects, MERN, AI Integration, Zunair Bin Zubair" />
+  <title>Zunair Bin Zubair</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -31,7 +32,7 @@
   <div class="loading-overlay">
     <div class="loading-spinner"></div>
   </div>
-  
+
   <nav class="navbar navbar-expand-lg fixed-top glass-effect" role="navigation" aria-label="Main Navigation">
     <div class="container">
       <a class="navbar-brand logo-text" href="#hero">
@@ -45,8 +46,8 @@
         <ul class="navbar-nav align-items-center">
           <li class="nav-item"><a class="nav-link px-3" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#volunteer">Leadership</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
           <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
@@ -58,7 +59,7 @@
       </div>
     </div>
   </nav>
-  
+
   <section id="hero" class="hero d-flex align-items-center text-center">
     <div class="container py-5">
       <div class="mb-4" data-aos="zoom-in" data-aos-delay="80">
@@ -91,7 +92,7 @@
       <i class="fas fa-lightbulb fa-7x"></i>
     </div>
   </section>
-  
+
   <section id="skills" class="section skills-section bg-light text-center">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
@@ -101,7 +102,19 @@
       <div id="skills-container" class="row justify-content-center g-3"></div>
     </div>
   </section>
-  
+
+    <section id="projects" class="section bg-light text-center position-relative">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title gradient-text">Featured Projects <span class="emoji" role="img" aria-label="laptop">💻</span></h2>
+        <p class="text-muted fs-5">Showcasing my most impactful work in AI, SaaS, and digital products.</p>
+      </div>
+      <div id="projects-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+    </div>
+    <div style="position:absolute;top:-40px;left:-55px;z-index:0;opacity:0.06;pointer-events:none;">
+      <i class="fa-solid fa-laptop-code fa-7x"></i>
+    </div>
+  </section>
   <section id="experience" class="section experience-section bg-light text-center">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
@@ -115,20 +128,7 @@
       <i class="fa-solid fa-briefcase fa-7x"></i>
     </div>
   </section>
-  
-  <section id="projects" class="section bg-light text-center position-relative">
-    <div class="container">
-      <div class="text-center mb-5" data-aos="fade-up">
-        <h2 class="section-title gradient-text">Featured Projects <span class="emoji" role="img" aria-label="laptop">💻</span></h2>
-        <p class="text-muted fs-5">Showcasing my most impactful work in AI, SaaS, and digital products.</p>
-      </div>
-      <div id="projects-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
-    </div>
-    <div style="position:absolute;top:-40px;left:-55px;z-index:0;opacity:0.06;pointer-events:none;">
-      <i class="fa-solid fa-laptop-code fa-7x"></i>
-    </div>
-  </section>
-  
+
   <section id="volunteer" class="section volunteer-section bg-light text-center position-relative">
     <div class="volunteer-bg-overlay"></div>
     <div class="container position-relative" style="z-index: 1;">
@@ -144,7 +144,7 @@
       <i class="fa-solid fa-hands-helping fa-7x"></i>
     </div>
   </section>
-  
+
   <section id="contact" class="section contact-section bg-light text-center position-relative">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
@@ -157,10 +157,24 @@
       </div>
     </div>
   </section>
-  
+
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background:rgba(0,0,0,0.94);border-radius:18px;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white" id="videoModalLabel"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0" id="videoModalBody">
+          <!-- YT video iframe inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script src="script.js"></script>
-</body>
 
+</body>
 </html>

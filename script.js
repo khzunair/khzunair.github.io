@@ -1,121 +1,35 @@
 // Data structures for dynamic content
 const portfolioData = {
   skills: [
-    {
-      name: "React",
-      iconClass: "devicon-react-original colored",
-      type: "devicon",
-    },
-    {
-      name: "Next.js",
-      iconClass: "devicon-nextjs-original-wordmark",
-      type: "devicon",
-    },
-    {
-      name: "Node.js",
-      iconClass: "devicon-nodejs-plain colored",
-      type: "devicon",
-    },
-    {
-      name: "Express",
-      iconClass: "devicon-express-original",
-      type: "devicon",
-    },
-    {
-      name: "Redux",
-      iconClass: "devicon-redux-original colored",
-      type: "devicon",
-    },
-    {
-      name: "Material UI",
-      iconSrc: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
-      type: "img",
-    },
-    {
-      name: "Tailwind CSS",
-      iconClass: "devicon-tailwindcss-plain colored",
-      type: "devicon",
-    },
-    {
-      name: "React Native",
-      iconClass: "devicon-react-original colored",
-      type: "devicon",
-    },
-    {
-      name: "TypeScript",
-      iconClass: "devicon-typescript-plain colored",
-      type: "devicon",
-    },
+    // ... unchanged ...
+    { name: "React", iconClass: "devicon-react-original colored", type: "devicon" },
+    { name: "Next.js", iconClass: "devicon-nextjs-original-wordmark", type: "devicon" },
+    { name: "Node.js", iconClass: "devicon-nodejs-plain colored", type: "devicon" },
+    { name: "Express", iconClass: "devicon-express-original", type: "devicon" },
+    { name: "Redux", iconClass: "devicon-redux-original colored", type: "devicon" },
+    { name: "Material UI", iconSrc: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg", type: "img" },
+    { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-plain colored", type: "devicon" },
+    { name: "React Native", iconClass: "devicon-react-original colored", type: "devicon" },
+    { name: "TypeScript", iconClass: "devicon-typescript-plain colored", type: "devicon" },
     { name: "Flask", iconClass: "devicon-flask-original", type: "devicon" },
-    {
-      name: "MongoDB",
-      iconClass: "devicon-mongodb-plain colored",
-      type: "devicon",
-    },
-    {
-      name: "SQL",
-      iconClass: "devicon-mysql-plain colored",
-      type: "devicon",
-    },
-    {
-      name: "JavaScript",
-      iconClass: "devicon-javascript-plain colored",
-      type: "devicon",
-    },
-    {
-      name: "HTML5",
-      iconClass: "devicon-html5-plain colored",
-      type: "devicon",
-    },
-    {
-      name: "CSS3",
-      iconClass: "devicon-css3-plain colored",
-      type: "devicon",
-    },
+    { name: "MongoDB", iconClass: "devicon-mongodb-plain colored", type: "devicon" },
+    { name: "SQL", iconClass: "devicon-mysql-plain colored", type: "devicon" },
+    { name: "JavaScript", iconClass: "devicon-javascript-plain colored", type: "devicon" },
+    { name: "HTML5", iconClass: "devicon-html5-plain colored", type: "devicon" },
+    { name: "CSS3", iconClass: "devicon-css3-plain colored", type: "devicon" },
     { name: "Git", iconClass: "devicon-git-plain colored", type: "devicon" },
-    {
-      name: "REST APIs",
-      iconClass: "devicon-fastapi-plain colored",
-      type: "devicon",
-    },
-    {
-      name: "TensorFlow",
-      iconClass: "devicon-tensorflow-original colored",
-      type: "devicon",
-    },
-    {
-      name: "OPEN AI",
-      iconSrc: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
-      type: "img",
-    },
-    {
-      name: "Hugging Face",
-      iconSrc: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-      type: "img",
-    },
-    {
-      name: "NumPy",
-      iconSrc: "https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg",
-      type: "img",
-    },
-    {
-      name: "scikit-learn",
-      iconSrc: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png",
-      type: "img",
-    },
-    {
-      name: "MobileNetV2",
-      iconSrc: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
-      type: "img",
-    },
-    {
-      name: "GraphQL",
-      iconClass: "devicon-graphql-plain colored",
-      type: "devicon",
-    },
+    { name: "REST APIs", iconClass: "devicon-fastapi-plain colored", type: "devicon" },
+    { name: "TensorFlow", iconClass: "devicon-tensorflow-original colored", type: "devicon" },
+    { name: "OPEN AI", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg", type: "img" },
+    { name: "Hugging Face", iconSrc: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg", type: "img" },
+    { name: "NumPy", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg", type: "img" },
+    { name: "scikit-learn", iconSrc: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png", type: "img" },
+    { name: "MobileNetV2", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg", type: "img" },
+    { name: "GraphQL", iconClass: "devicon-graphql-plain colored", type: "devicon" }
   ],
 
   experiences: [
+    // ... unchanged ...
     {
       company: "Imam Organization",
       title: "Software Developer",
@@ -150,7 +64,8 @@ const portfolioData = {
       image: "./assets/img/nature/planteria.png",
       badges: ["React Native", "Flask", "Node.js", "MongoDB", "TensorFlow", "Gemini AI"],
       featured: "🌿 Featured",
-      aosDelay: 0
+      aosDelay: 0,
+      video: "https://youtu.be/yhmWcm10QKM?si=-SxE0Ke0aV5PceWC"
     },
     {
       title: "HireFlow – AI Resume Screening Platform",
@@ -158,7 +73,9 @@ const portfolioData = {
       image: "./assets/img/nature/HireFlow.png",
       badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
       featured: "🚀 Google Developer Hackathon",
-      aosDelay: 60
+      aosDelay: 60,
+      link: "http://careernavigator.site/",
+      video: "https://youtu.be/RRopdNR0Mxg?si=YTWMsi6LtJ5-9SKW"
     },
     {
       title: "MedEdPort – Doctors Portal",
@@ -178,7 +95,7 @@ const portfolioData = {
       title: "Convo Panda",
       description: "Social messaging web app with private/group chat, friend requests, and real-time communication. Built with scalable, community-driven architecture.",
       image: "./assets/img/nature/convo-panda.jpeg",
-      badges: ["React", "Socket.IO", "Node.js"],
+      badges: ["React", "MongoDB", "Node.js"],
       aosDelay: 240
     },
     {
@@ -199,6 +116,7 @@ const portfolioData = {
   ],
 
   volunteer: [
+    // ... unchanged ...
     {
       title: "General Secretary – Hayatian Computing Society",
       organization: "University of Gujrat",
@@ -230,6 +148,7 @@ const portfolioData = {
   ],
 
   contact: [
+    // ... unchanged ...
     {
       type: "Email",
       value: "zunairkhawajaa@gmail.com",
@@ -249,12 +168,8 @@ const portfolioData = {
   ]
 };
 
-// DOM Content Loaded Event
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize AOS
   AOS.init({ duration: 1000, once: true, offset: 100 });
-
-  // Initialize all dynamic content
   initNavigation();
   initSkills();
   initExperience();
@@ -264,9 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initLazyLoading();
 });
 
-// Navigation and scrolling functions
 function initNavigation() {
-  // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", function (e) {
       const target = document.querySelector(this.getAttribute("href"));
@@ -278,8 +191,6 @@ function initNavigation() {
       }
     });
   });
-
-  // Dynamic Navbar styling on scroll
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     if (navbar) {
@@ -294,7 +205,6 @@ function initNavigation() {
     }
   });
 
-  // Set active navigation link based on scroll position
   const sections = document.querySelectorAll("section[id]");
   window.addEventListener("scroll", function () {
     let scrollPosition = window.scrollY + 150;
@@ -307,7 +217,6 @@ function initNavigation() {
     });
   });
 
-  // Parallax effect for the hero section
   window.addEventListener("scroll", function () {
     const hero = document.querySelector(".hero");
     if (hero) {
@@ -317,7 +226,6 @@ function initNavigation() {
     }
   });
 
-  // Typewriter effect for the hero title
   setTimeout(function () {
     const heroTitle = document.querySelector(".hero-title .gradient-text");
     if (heroTitle) {
@@ -339,11 +247,9 @@ function typeEffect(element, text, speed = 82) {
   typeWriter();
 }
 
-// Initialize Skills Section
 function initSkills() {
   const skillsContainer = document.getElementById("skills-container");
   if (!skillsContainer) return;
-
   portfolioData.skills.forEach((skill, index) => {
     let iconHtml = "";
     if (skill.type === "devicon") {
@@ -351,7 +257,6 @@ function initSkills() {
     } else if (skill.type === "img") {
       iconHtml = `<img src="${skill.iconSrc}" alt="${skill.name}" style="height: 3rem; object-fit: contain;" />`;
     }
-    
     const delay = 40 * index;
     const skillHtml = `
       <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="${delay}">
@@ -363,11 +268,9 @@ function initSkills() {
   });
 }
 
-// Initialize Experience Section
 function initExperience() {
   const experienceContainer = document.getElementById("experience-container");
   if (!experienceContainer) return;
-
   portfolioData.experiences.forEach(exp => {
     const responsibilitiesList = exp.responsibilities.map(resp => `<li>${resp}</li>`).join('');
     const experienceCardHtml = `
@@ -386,48 +289,111 @@ function initExperience() {
   });
 }
 
-// Initialize Projects Section
 function initProjects() {
   const projectsContainer = document.getElementById("projects-container");
   if (!projectsContainer) return;
-
-  portfolioData.projects.forEach(project => {
-    const badgesHtml = project.badges.map(badge => 
+  projectsContainer.innerHTML = '';
+  portfolioData.projects.forEach((project, idx) => {
+    const badgesHtml = project.badges.map(badge =>
       `<span class="badge bg-dark">${badge}</span>`
     ).join('');
-    
-    const featuredBadge = project.featured ? 
+    const featuredBadge = project.featured ?
       `<span class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2" 
              style="background: var(--gradient-primary); color: #fff; font-weight: 600;">
         ${project.featured}
       </span>` : '';
-    
+    // Action Buttons (compact)
+    let actionBtns = '';
+    if (project.video && project.link) {
+      actionBtns = `
+        <div class="project-action-row mt-auto">
+          <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
+            <i class="fa fa-play-circle"></i> Demo
+          </button>
+          <a href="${project.link}" class="project-action-btn" target="_blank" rel="noopener" title="Visit Live">
+            <i class="fa fa-link"></i> Live
+          </a>
+        </div>
+      `;
+    } else if (project.video) {
+      actionBtns = `
+        <div class="project-action-row mt-auto">
+          <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
+            <i class="fa fa-play-circle"></i> Demo
+          </button>
+        </div>
+      `;
+    } else if (project.link) {
+      actionBtns = `
+        <div class="project-action-row mt-auto">
+          <a href="${project.link}" class="project-action-btn" target="_blank" rel="noopener" title="Visit Live">
+            <i class="fa fa-link"></i> Live
+          </a>
+        </div>
+      `;
+    }
     const projectHtml = `
-      <div class="col" data-aos="zoom-in" data-aos-delay="${project.aosDelay}">
-        <div class="card card-modern h-100 border-0 shadow-lg position-relative">
+      <div class="col" data-aos="zoom-in" data-aos-delay="${project.aosDelay || 0}">
+        <div class="card card-modern h-100 border-0 shadow-lg position-relative d-flex flex-column">
           <div class="project-img-wrapper position-relative">
             <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                  data-src="${project.image}" alt="${project.title}"
                  class="img-fluid rounded-top lazyload">
             ${featuredBadge}
           </div>
-          <div class="card-body text-start">
-            <h4 class="card-title fw-bold gradient-text">${project.title}</h4>
-            <p class="card-text small">${project.description}</p>
-            <div class="d-flex flex-wrap gap-2 mt-3">${badgesHtml}</div>
+          <div class="card-body text-start d-flex flex-column h-91">
+            <h4 class="card-title fw-bold gradient-text mb-2">${project.title}</h4>
+            <div class="d-flex flex-wrap gap-2 mb-2">${badgesHtml}</div>
+            <p class="card-text small mb-2">${project.description}</p>
+            ${actionBtns}
           </div>
         </div>
       </div>
     `;
     projectsContainer.innerHTML += projectHtml;
   });
+  document.querySelectorAll('.project-action-btn[data-video]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const videoUrl = this.getAttribute('data-video');
+      const projectTitle = this.getAttribute('data-title');
+      openVideoModal(videoUrl, projectTitle);
+    });
+  });
 }
 
-// Initialize Volunteer Section
+function openVideoModal(videoUrl, title) {
+  let embedUrl = '';
+  if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
+    let videoId = '';
+    if (videoUrl.includes('youtu.be/')) {
+      videoId = videoUrl.split('youtu.be/')[1].split(/[?&]/)[0];
+    } else if (videoUrl.includes('v=')) {
+      videoId = videoUrl.split('v=')[1].split('&')[0];
+    }
+    embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  } else {
+    embedUrl = videoUrl;
+  }
+  const modalBody = document.getElementById('videoModalBody');
+  modalBody.innerHTML = `
+    <div class="ratio ratio-16x9">
+      <iframe src="${embedUrl}" 
+        frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+    </div>
+  `;
+  // Set project title in modal
+  document.getElementById('videoModalLabel').textContent = title || "Project Demo";
+  const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+  videoModal.show();
+  document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+    modalBody.innerHTML = '';
+    document.getElementById('videoModalLabel').textContent = '';
+  }, { once: true });
+}
+
 function initVolunteer() {
   const volunteerContainer = document.getElementById("volunteer-container");
   if (!volunteerContainer) return;
-
   portfolioData.volunteer.forEach(volunteer => {
     const responsibilitiesList = volunteer.responsibilities.map(resp => `<li>${resp}</li>`).join('');
     const volunteerHtml = `
@@ -447,11 +413,9 @@ function initVolunteer() {
   });
 }
 
-// Initialize Contact Section
 function initContact() {
   const contactContainer = document.getElementById("contact-container");
   if (!contactContainer) return;
-
   portfolioData.contact.forEach(contact => {
     const contactHtml = `
       <div class="col-md-5" data-aos="zoom-in" data-aos-delay="${contact.aosDelay}">
@@ -470,11 +434,9 @@ function initContact() {
   });
 }
 
-// Lazy loading for images
 function initLazyLoading() {
   const lazyImages = document.querySelectorAll("img.lazyload");
   const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
-  
   const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -490,7 +452,6 @@ function initLazyLoading() {
       }
     });
   }, observerOptions);
-  
   lazyImages.forEach((image) => {
     imageObserver.observe(image);
   });
