@@ -81,7 +81,7 @@ const portfolioData = {
       title: "Career Navigator ",
       description: "Navigate your career path with precision using our AI-powered tools. Discover personalized roadmaps, identify skill gaps, and find your ideal role.",
       image: "./assets/img/nature/Career-Navigator.png",
-      badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
+      badges: ["Next JS", "PostgreSQL", "Node.js", "Supabase", "React", "Tailwind CSS"],
       featured: "😉 Coming Soon",
       aosDelay: 120,
       link: "http://careernavigator.site/",
