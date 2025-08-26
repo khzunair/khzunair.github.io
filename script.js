@@ -33,13 +33,17 @@ const portfolioData = {
     {
       company: "Imam Organization",
       title: "Software Developer",
-      duration: "Nov 2024 – Jan 2025 | Remote (UK)",
+      duration: "Nov 2024 – Jan 2025 | Remote ",
       icon: "fa-solid fa-building",
       responsibilities: [
-        "Built a School Management System serving users with attendance, grading, and user roles.",
-        "Designed secure multi-role authentication (JWT): Admin, Teacher, Student, Family.",
-        "Integrated AWS S3 & Cloudinary for scalable media delivery, reducing latency.",
-        "Automated grading/reporting workflows, saving ~2 hrs/week via online test systems.",
+        "Developed a customized School Management System for an Islamic education organization with comprehensive features.",
+        "Designed and implemented a secure multi-role authentication system for Teachers, Students, Families, and Administrators.",
+        "Built an Attendance System to track student regularity and classroom behavior.",
+        "Enabled online submission of assignments and homework within specified deadlines.",
+        "Developed a Family Portal to track attendance, submit leave requests, and access academic progress and results.",
+        "Implemented result announcements through the online portal.",
+        "Integrated Cloudinary for scalable media delivery, improving performance and reducing latency for books and other learning resources.",
+        "Automated grading and reporting workflows, significantly reducing manual effort.",
       ],
       aosDelay: 0
     },
@@ -49,20 +53,25 @@ const portfolioData = {
       duration: "Sep 2023 – Dec 2024 | Remote (USA)",
       icon: "fa-solid fa-user-md",
       responsibilities: [
-        "Architected a real-time medical portal for professionals using MERN stack and JWT auth.",
-        "Optimized media architecture via Cloudinary; reduced upload latency by 40%.",
-        "Set up CI/CD via Heroku; led end-to-end SDLC including planning, execution, and delivery.",
+        "Developed standard user interfaces using Material UI, including authentication flows, verification pages, landing pages, upload screens, comment sections, admin dashboard, and other core components.",
+        "Implemented a secure registration process with email verification and third-party login via Google.",
+        "Built a screening system for verifying MDs through a structured verification process and managing users in the admin panel.",
+        "Implemented engagement tracking features, including likes, unique views, and comments on posts.",
+        "Developed REST APIs in Express.js for video uploading and streaming management.",
+        "Set up automated CI/CD pipelines with Heroku for seamless deployment.",
+        "Led the end-to-end software development lifecycle (SDLC), including planning, execution, and delivery.",
       ],
+
       aosDelay: 160
     },
   ],
 
   projects: [
     {
-      title: "Planteria – AI Plant Disease Detection",
-      description: "AI-powered mobile app using MobileNetV2 to identify plant diseases from images (96% accuracy). Integrated e-commerce for gardening supplies, empowering vendors and community-based micro-entrepreneurship.",
+      title: "Planteria – AI-Based Plant Disease Detection",
+      description: "AI-powered mobile application that identify plant diseases from your mobile phone and give remedies to gardeners, along with an Integrated e-commerce for gardening products (inc. plants, seeds, tools & relevent-supplies), empowering vendors and micro-entrepreneurship.",
       image: "./assets/img/nature/planteria.png",
-      badges: ["React Native", "Flask", "Node.js", "MongoDB", "TensorFlow", "Gemini AI"],
+      badges: ["React Native", "Flask", "Node.js", "MongoDB", "TensorFlow", "Open AI", "TypeScript"],
       featured: "🌿 Featured",
       aosDelay: 0,
       video: "https://youtu.be/uYJc3JNPHp4",
@@ -70,18 +79,18 @@ const portfolioData = {
       //   link:""
     },
     {
-      title: "MedEdPort – Doctors Portal",
-      description: "Real-time educational portal for doctors. Implements secure JWT authentication, Cloudinary media uploads, and full CI/CD deployment for reliability.",
+      title: "MedEdPort – Streaming Platforms for MDs",
+      description: "A secure streaming educational portal for medical professionals, that only hosts verified MDs to share awareness and education in the community by sharing video content and audience engagement features.",
       image: "./assets/img/nature/meded.png",
-      badges: ["React", "Node.js", "MongoDB", "Cloudinary", "JWT"],
+      badges: ["React", "Node.js", "MongoDB", "Cloudinary", "JWT", "cloudinary", "JavaScript"],
       aosDelay: 60,
       video: "https://youtu.be/jPUgrTiLmxM"
     },
     {
       title: "Career Navigator ",
-      description: "Navigate your career path with precision using our AI-powered tools. Discover personalized roadmaps, identify skill gaps, and find your ideal role.",
+      description: "Navigate your career path with latest tech courses and precise AI-powered tools for career development. Discover personalized roadmaps, identify skill gaps, and find your ideal role",
       image: "./assets/img/nature/Career-Navigator.png",
-      badges: ["Next JS", "PostgreSQL", "Node.js", "Supabase", "React", "Tailwind CSS"],
+      badges: ["Next JS", "PostgreSQL", "Node.js", "Supabase", "React", "Tailwind CSS", "TypeScript"],
       featured: "😉 Coming Soon",
       aosDelay: 120,
       link: "http://careernavigator.site/",
@@ -89,7 +98,7 @@ const portfolioData = {
     },
     {
       title: "HireFlow – AI Resume Screening Platform",
-      description: "SaaS tool to automate resume screening. Uses PDF parsing, RAG, and human-like summaries for candidate fit analysis—revolutionizing recruitment pipelines for modern hiring.",
+      description: "AI based Recruitment tool for Hiring Managers to automate resume screening and filtering to find the top candidates for a Job Position along with the reasoning that set one candidate apart from the others, streamling the modern-day hiring processes.",
       image: "./assets/img/nature/HireFlow.png",
       badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
       featured: "🚀 Google Developer Hackathon",
@@ -99,7 +108,7 @@ const portfolioData = {
     },
     {
       title: "News App",
-      description: "Aggregates real-time news headlines from multiple countries and categories via NewsAPI, with source/category filters, bookmarks, and read-later features.",
+      description: "This web-based application aggregates real-time news from global reputable sources of different countries and categories, allowing users to have authentic news of their choice from legit sources.",
       image: "./assets/img/nature/news app.png",
       badges: ["React", "NewsAPI", "Bootstrap"],
       aosDelay: 240,
@@ -107,39 +116,38 @@ const portfolioData = {
     },
     {
       title: "Convo Panda",
-      description: "Social messaging web app with private/group chat, friend requests, and real-time communication. Built with scalable, community-driven architecture.",
+      description: "An experimental Social messaging web application for private chat, friend requests, and real-time communication.",
       image: "./assets/img/nature/convo-panda.jpeg",
       badges: ["React", "MongoDB", "Node.js"],
       aosDelay: 300
     },
     {
-      title: "Netflix UI Clone",
-      description: "Netflix UI rebuilt with browse by category, real-time previews, and movie detail modals using TMDB API and Firebase backend.",
+      title: "Netflix Clone",
+      description: "Impressed by the amazing User Experience of Netflix, build a User Interface with browse by category, real-time trailers previews, and movie detail modals using teh Movide Database APIs.",
       image: "./assets/img/nature/netflix clone.png",
-      badges: ["React", "TMDB API"],
+      badges: ["React", "HTML5", "css3"],
       aosDelay: 360,
       video: "https://youtu.be/yhmWcm10QKM"
     },
     {
       title: "CMS Darntl – Contact Management System",
-      description: "Business contact management tool with PDF & spreadsheet report generation for actionable insights.",
+      description: "A small business customized contact management tool for storing customer and business clients information details with PDF & spreadsheet report generation for actionable insights.",
       image: "./assets/img/nature/bussiness analyical.png",
-      badges: ["Spring Boot", "MySQL", "React.js", "PDF Gen", "Excel Export"],
+      badges: ["Spring Boot", "MySQL", "React.js", "java"],
       featured: "First Freelance Project 🎉",
       aosDelay: 400
     },
   ],
 
   volunteer: [
-    // ... unchanged ...
     {
       title: "General Secretary – Hayatian Computing Society",
       organization: "University of Gujrat",
       duration: "2024 – 2025",
       icon: "fa-solid fa-users",
       responsibilities: [
-        "Led 10+ academic, tech, and social events, engaging 400+ students.",
-        "Organized inter-departmental coding contests and seminars (200+ participants).",
+        "Led 10+ academic, tech, and social events, engaging upto 400+ students.",
+        "Organized inter-departmental coding contests and seminars.",
         "Managed logistics for hackathons, FYP expos, and programming tournaments.",
       ],
       borderClass: "border-primary",

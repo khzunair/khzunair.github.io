@@ -809,6 +809,6 @@ button:focus {
   font-size: 0.98rem;
 }
 .card.card-modern {
-  min-height: 250px;
+  min-height: 75px;
   padding-bottom: 0.5rem;
 }
