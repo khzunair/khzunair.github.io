@@ -66,8 +66,8 @@ const portfolioData = {
       featured: "🌿 Featured",
       aosDelay: 0,
       video: "https://youtu.be/uYJc3JNPHp4",
-      concept:"https://youtu.be/yMqYKmechmA",
-    //   link:""
+      concept: "https://youtu.be/yMqYKmechmA",
+      //   link:""
     },
     {
       title: "MedEdPort – Doctors Portal",
@@ -75,9 +75,9 @@ const portfolioData = {
       image: "./assets/img/nature/meded.png",
       badges: ["React", "Node.js", "MongoDB", "Cloudinary", "JWT"],
       aosDelay: 60,
-      video:"https://youtu.be/jPUgrTiLmxM"
+      video: "https://youtu.be/jPUgrTiLmxM"
     },
-            {
+    {
       title: "Career Navigator ",
       description: "Navigate your career path with precision using our AI-powered tools. Discover personalized roadmaps, identify skill gaps, and find your ideal role.",
       image: "./assets/img/nature/Career-Navigator.png",
@@ -87,14 +87,14 @@ const portfolioData = {
       link: "http://careernavigator.site/",
       // video: "https://youtu.be/RRopdNR0Mxg"
     },
-        {
+    {
       title: "HireFlow – AI Resume Screening Platform",
       description: "SaaS tool to automate resume screening. Uses PDF parsing, RAG, and human-like summaries for candidate fit analysis—revolutionizing recruitment pipelines for modern hiring.",
       image: "./assets/img/nature/HireFlow.png",
       badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
       featured: "🚀 Google Developer Hackathon",
       aosDelay: 180,
-    //   link: "http://careernavigator.site/",
+      //   link: "http://careernavigator.site/",
       video: "https://youtu.be/RRopdNR0Mxg"
     },
     {
@@ -103,7 +103,7 @@ const portfolioData = {
       image: "./assets/img/nature/news app.png",
       badges: ["React", "NewsAPI", "Bootstrap"],
       aosDelay: 240,
-      video:"https://youtu.be/h_0t8CrBBTE"
+      video: "https://youtu.be/h_0t8CrBBTE"
     },
     {
       title: "Convo Panda",
@@ -118,7 +118,7 @@ const portfolioData = {
       image: "./assets/img/nature/netflix clone.png",
       badges: ["React", "TMDB API"],
       aosDelay: 360,
-      video:"https://youtu.be/yhmWcm10QKM"
+      video: "https://youtu.be/yhmWcm10QKM"
     },
     {
       title: "CMS Darntl – Contact Management System",
@@ -330,7 +330,7 @@ function initProjects() {
           </a>
         </div>
       `;
-    }else if (project.video && project.concept) {
+    } else if (project.video && project.concept) {
       actionBtns = `
         <div class="project-action-row mt-auto">
           <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
@@ -341,7 +341,7 @@ function initProjects() {
           </button>
         </div>
       `;
-    }  
+    }
     else if (project.video) {
       actionBtns = `
         <div class="project-action-row mt-auto">
