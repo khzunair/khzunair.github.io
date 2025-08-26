@@ -65,45 +65,60 @@ const portfolioData = {
       badges: ["React Native", "Flask", "Node.js", "MongoDB", "TensorFlow", "Gemini AI"],
       featured: "🌿 Featured",
       aosDelay: 0,
-      video: "https://youtu.be/yhmWcm10QKM?si=-SxE0Ke0aV5PceWC"
-    },
-    {
-      title: "HireFlow – AI Resume Screening Platform",
-      description: "SaaS tool to automate resume screening. Uses PDF parsing, RAG, and human-like summaries for candidate fit analysis—revolutionizing recruitment pipelines for modern hiring.",
-      image: "./assets/img/nature/HireFlow.png",
-      badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
-      featured: "🚀 Google Developer Hackathon",
-      aosDelay: 60,
-      link: "http://careernavigator.site/",
-      video: "https://youtu.be/RRopdNR0Mxg?si=YTWMsi6LtJ5-9SKW"
+      video: "https://youtu.be/uYJc3JNPHp4",
+      concept:"https://youtu.be/yMqYKmechmA",
+    //   link:""
     },
     {
       title: "MedEdPort – Doctors Portal",
       description: "Real-time educational portal for doctors. Implements secure JWT authentication, Cloudinary media uploads, and full CI/CD deployment for reliability.",
       image: "./assets/img/nature/meded.png",
       badges: ["React", "Node.js", "MongoDB", "Cloudinary", "JWT"],
-      aosDelay: 120
+      aosDelay: 60,
+      video:"https://youtu.be/jPUgrTiLmxM"
+    },
+            {
+      title: "Career Navigator ",
+      description: "Navigate your career path with precision using our AI-powered tools. Discover personalized roadmaps, identify skill gaps, and find your ideal role.",
+      image: "./assets/img/nature/Career-Navigator.png",
+      badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
+      featured: "😉 Coming Soon",
+      aosDelay: 120,
+    //   link: "http://careernavigator.site/",
+      video: "https://youtu.be/RRopdNR0Mxg"
+    },
+        {
+      title: "HireFlow – AI Resume Screening Platform",
+      description: "SaaS tool to automate resume screening. Uses PDF parsing, RAG, and human-like summaries for candidate fit analysis—revolutionizing recruitment pipelines for modern hiring.",
+      image: "./assets/img/nature/HireFlow.png",
+      badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
+      featured: "🚀 Google Developer Hackathon",
+      aosDelay: 180,
+    //   link: "http://careernavigator.site/",
+      video: "https://youtu.be/RRopdNR0Mxg"
     },
     {
       title: "News App",
       description: "Aggregates real-time news headlines from multiple countries and categories via NewsAPI, with source/category filters, bookmarks, and read-later features.",
       image: "./assets/img/nature/news app.png",
       badges: ["React", "NewsAPI", "Bootstrap"],
-      aosDelay: 180
+      aosDelay: 240,
+      video:"https://youtu.be/h_0t8CrBBTE"
     },
     {
       title: "Convo Panda",
       description: "Social messaging web app with private/group chat, friend requests, and real-time communication. Built with scalable, community-driven architecture.",
       image: "./assets/img/nature/convo-panda.jpeg",
       badges: ["React", "MongoDB", "Node.js"],
-      aosDelay: 240
+      aosDelay: 300
     },
     {
       title: "Netflix UI Clone",
       description: "Netflix UI rebuilt with browse by category, real-time previews, and movie detail modals using TMDB API and Firebase backend.",
       image: "./assets/img/nature/netflix clone.png",
       badges: ["React", "TMDB API"],
-      aosDelay: 300
+      aosDelay: 360,
+      video:"https://youtu.be/yhmWcm10QKM"
     },
     {
       title: "CMS Darntl – Contact Management System",
@@ -111,7 +126,7 @@ const portfolioData = {
       image: "./assets/img/nature/bussiness analyical.png",
       badges: ["Spring Boot", "MySQL", "React.js", "PDF Gen", "Excel Export"],
       featured: "First Freelance Project 🎉",
-      aosDelay: 360
+      aosDelay: 400
     },
   ],
 
@@ -315,7 +330,19 @@ function initProjects() {
           </a>
         </div>
       `;
-    } else if (project.video) {
+    }else if (project.video && project.concept) {
+      actionBtns = `
+        <div class="project-action-row mt-auto">
+          <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
+            <i class="fa fa-play-circle"></i> Demo
+          </button>
+          <button class="project-action-btn" data-video="${project.demo}" data-title="${project.title}" title="Project Demo">
+            <i class="fa fa-play-circle"></i> Concept
+          </button>
+        </div>
+      `;
+    }  
+    else if (project.video) {
       actionBtns = `
         <div class="project-action-row mt-auto">
           <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
