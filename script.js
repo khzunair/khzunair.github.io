@@ -84,8 +84,8 @@ const portfolioData = {
       badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
       featured: "😉 Coming Soon",
       aosDelay: 120,
-    //   link: "http://careernavigator.site/",
-      video: "https://youtu.be/RRopdNR0Mxg"
+      link: "http://careernavigator.site/",
+      // video: "https://youtu.be/RRopdNR0Mxg"
     },
         {
       title: "HireFlow – AI Resume Screening Platform",
