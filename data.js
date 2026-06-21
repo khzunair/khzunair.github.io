@@ -9,10 +9,10 @@ const DATA = {
 
   nav: [
     { href: "#about", label: "About" },
-    { href: "#work", label: "Work" },
     { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
+    { href: "#work", label: "Work" },
+    { href: "#projects", label: "Projects" },
     { href: "#leadership", label: "Leadership" },
     { href: "#contact", label: "Contact" },
   ],
@@ -282,36 +282,6 @@ const DATA = {
         desc: "A contact management system for a small business — store client details and generate PDF & spreadsheet reports for actionable insight.",
         tech: ["Spring Boot", "MySQL", "React", "Java"],
       },
-      {
-        img: "assets/img/news-app.webp",
-        type: "Web",
-        year: "2023",
-        title: "News App",
-        desc: "Aggregates real-time news from reputable global sources across countries and categories, so users get authentic news of their choice from legit sources.",
-        tech: ["React", "NewsAPI", "Bootstrap"],
-        actions: [
-          { kind: "video", label: "Demo", url: "https://youtu.be/h_0t8CrBBTE" },
-        ],
-      },
-      {
-        img: "assets/img/netflix-clone.webp",
-        type: "Web",
-        year: "2023",
-        title: "Netflix Clone",
-        desc: "A Netflix-inspired UI with browse-by-category, real-time trailer previews, and movie detail modals, built on The Movie DB API.",
-        tech: ["React", "HTML5", "CSS3"],
-        actions: [
-          { kind: "video", label: "Demo", url: "https://youtu.be/yhmWcm10QKM" },
-        ],
-      },
-      {
-        img: "assets/img/convo-panda.webp",
-        type: "Web",
-        year: "2022",
-        title: "Convo Panda",
-        desc: "An experimental social messaging app — private chat, friend requests, and real-time communication.",
-        tech: ["React", "Node.js", "MongoDB"],
-      },
     ],
   },
 
@@ -375,8 +345,21 @@ const DATA = {
   leadership: {
     label: "Leadership",
     titleHtml: 'Beyond the <span class="text-accent">code.</span>',
-    descHtml: "Community impact, event leadership, and team building.",
+    descHtml:
+      "Leading teams and delivery — plus community impact and event leadership.",
     items: [
+      {
+        icon: "🧭",
+        title: "Team Lead & Core Developer",
+        org: "Wonder Craftz — Tameer.ai",
+        date: "Oct 2025 — June 2026",
+        bullets: [
+          "Lead development across the sales, admin, and engineering teams",
+          "Run client meetings and align delivery with business needs",
+          "Lead PR reviews, enforcing code quality and standards across the codebase",
+          "Own app-related technical responsibilities end-to-end",
+        ],
+      },
       {
         icon: "🤝",
         title: "General Secretary",
