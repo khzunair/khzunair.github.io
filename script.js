@@ -1,493 +1,353 @@
-// Data structures for dynamic content
-const portfolioData = {
-  skills: [
-    // ... unchanged ...
-    { name: "React", iconClass: "devicon-react-original colored", type: "devicon" },
-    { name: "Next.js", iconClass: "devicon-nextjs-original-wordmark", type: "devicon" },
-    { name: "Node.js", iconClass: "devicon-nodejs-plain colored", type: "devicon" },
-    { name: "Express", iconClass: "devicon-express-original", type: "devicon" },
-    { name: "Redux", iconClass: "devicon-redux-original colored", type: "devicon" },
-    { name: "Material UI", iconSrc: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg", type: "img" },
-    { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-plain colored", type: "devicon" },
-    { name: "React Native", iconClass: "devicon-react-original colored", type: "devicon" },
-    { name: "TypeScript", iconClass: "devicon-typescript-plain colored", type: "devicon" },
-    { name: "Flask", iconClass: "devicon-flask-original", type: "devicon" },
-    { name: "MongoDB", iconClass: "devicon-mongodb-plain colored", type: "devicon" },
-    { name: "SQL", iconClass: "devicon-mysql-plain colored", type: "devicon" },
-    { name: "JavaScript", iconClass: "devicon-javascript-plain colored", type: "devicon" },
-    { name: "HTML5", iconClass: "devicon-html5-plain colored", type: "devicon" },
-    { name: "CSS3", iconClass: "devicon-css3-plain colored", type: "devicon" },
-    { name: "Git", iconClass: "devicon-git-plain colored", type: "devicon" },
-    { name: "REST APIs", iconClass: "devicon-fastapi-plain colored", type: "devicon" },
-    { name: "TensorFlow", iconClass: "devicon-tensorflow-original colored", type: "devicon" },
-    { name: "OPEN AI", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg", type: "img" },
-    { name: "Hugging Face", iconSrc: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg", type: "img" },
-    { name: "NumPy", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg", type: "img" },
-    { name: "scikit-learn", iconSrc: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png", type: "img" },
-    { name: "MobileNetV2", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg", type: "img" },
-    { name: "GraphQL", iconClass: "devicon-graphql-plain colored", type: "devicon" }
-  ],
+// Renders the whole page from data.js (single source of truth, global DATA), then wires up interactions.
+// Fields ending in "Html" intentionally hold markup; data.js is first-party content, so it's injected as-is.
 
-  experiences: [
-    // ... unchanged ...
-    {
-      company: "Imam Organization",
-      title: "Software Developer",
-      duration: "Nov 2024 – Jan 2025 | Remote ",
-      icon: "fa-solid fa-building",
-      responsibilities: [
-        "Developed a customized School Management System for an Islamic education organization with comprehensive features.",
-        "Designed and implemented a secure multi-role authentication system for Teachers, Students, Families, and Administrators.",
-        "Built an Attendance System to track student regularity and classroom behavior.",
-        "Enabled online submission of assignments and homework within specified deadlines.",
-        "Developed a Family Portal to track attendance, submit leave requests, and access academic progress and results.",
-        "Implemented result announcements through the online portal.",
-        "Integrated Cloudinary for scalable media delivery, improving performance and reducing latency for books and other learning resources.",
-        "Automated grading and reporting workflows, significantly reducing manual effort.",
-      ],
-      aosDelay: 0
-    },
-    {
-      company: "MedEdPort",
-      title: "Full Stack Developer",
-      duration: "Sep 2023 – Dec 2024 | Remote (USA)",
-      icon: "fa-solid fa-user-md",
-      responsibilities: [
-        "Developed standard user interfaces using Material UI, including authentication flows, verification pages, landing pages, upload screens, comment sections, admin dashboard, and other core components.",
-        "Implemented a secure registration process with email verification and third-party login via Google.",
-        "Built a screening system for verifying MDs through a structured verification process and managing users in the admin panel.",
-        "Implemented engagement tracking features, including likes, unique views, and comments on posts.",
-        "Developed REST APIs in Express.js for video uploading and streaming management.",
-        "Set up automated CI/CD pipelines with Heroku for seamless deployment.",
-        "Led the end-to-end software development lifecycle (SDLC), including planning, execution, and delivery.",
-      ],
+const techTags = arr => (arr || []).map(t => `<span class="tech-tag">${t}</span>`).join('');
+const bullets = arr => (arr || []).map(b => `<li>${b}</li>`).join('');
 
-      aosDelay: 160
-    },
-  ],
-
-  projects: [
-    {
-      title: "Planteria – AI-Based Plant Disease Detection",
-      description: "AI-powered mobile application that identify plant diseases from your mobile phone and give remedies to gardeners, along with an Integrated e-commerce for gardening products (inc. plants, seeds, tools & relevent-supplies), empowering vendors and micro-entrepreneurship.",
-      image: "./assets/img/nature/planteria.png",
-      badges: ["React Native", "Flask", "Node.js", "MongoDB", "TensorFlow", "Open AI", "TypeScript"],
-      featured: "🌿 Featured",
-      aosDelay: 0,
-      video: "https://youtu.be/uYJc3JNPHp4",
-      concept: "https://youtu.be/yMqYKmechmA",
-      //   link:""
-    },
-    {
-      title: "MedEdPort – Streaming Platforms for MDs",
-      description: "A secure streaming educational portal for medical professionals, that only hosts verified MDs to share awareness and education in the community by sharing video content and audience engagement features.",
-      image: "./assets/img/nature/meded.png",
-      badges: ["React", "Node.js", "MongoDB", "Cloudinary", "JWT", "cloudinary", "JavaScript"],
-      aosDelay: 60,
-      video: "https://youtu.be/jPUgrTiLmxM"
-    },
-    {
-      title: "Career Navigator ",
-      description: "Navigate your career path with latest tech courses and precise AI-powered tools for career development. Discover personalized roadmaps, identify skill gaps, and find your ideal role",
-      image: "./assets/img/nature/Career-Navigator.png",
-      badges: ["Next JS", "PostgreSQL", "Node.js", "Supabase", "React", "Tailwind CSS", "TypeScript"],
-      featured: "😉 Coming Soon",
-      aosDelay: 120,
-      link: "http://careernavigator.site/",
-      // video: "https://youtu.be/RRopdNR0Mxg"
-    },
-    {
-      title: "HireFlow – AI Resume Screening Platform",
-      description: "AI based Recruitment tool for Hiring Managers to automate resume screening and filtering to find the top candidates for a Job Position along with the reasoning that set one candidate apart from the others, streamling the modern-day hiring processes.",
-      image: "./assets/img/nature/HireFlow.png",
-      badges: ["React", "Flask", "Node.js", "MongoDB", "PyMuPDF", "Gemini AI", "RAG"],
-      featured: "🚀 Google Developer Hackathon",
-      aosDelay: 180,
-      //   link: "http://careernavigator.site/",
-      video: "https://youtu.be/RRopdNR0Mxg"
-    },
-    {
-      title: "News App",
-      description: "This web-based application aggregates real-time news from global reputable sources of different countries and categories, allowing users to have authentic news of their choice from legit sources.",
-      image: "./assets/img/nature/news app.png",
-      badges: ["React", "NewsAPI", "Bootstrap"],
-      aosDelay: 240,
-      video: "https://youtu.be/h_0t8CrBBTE"
-    },
-    {
-      title: "Convo Panda",
-      description: "An experimental Social messaging web application for private chat, friend requests, and real-time communication.",
-      image: "./assets/img/nature/convo-panda.jpeg",
-      badges: ["React", "MongoDB", "Node.js"],
-      aosDelay: 300
-    },
-    {
-      title: "Netflix Clone",
-      description: "Impressed by the amazing User Experience of Netflix, build a User Interface with browse by category, real-time trailers previews, and movie detail modals using teh Movide Database APIs.",
-      image: "./assets/img/nature/netflix clone.png",
-      badges: ["React", "HTML5", "css3"],
-      aosDelay: 360,
-      video: "https://youtu.be/yhmWcm10QKM"
-    },
-    {
-      title: "CMS Darntl – Contact Management System",
-      description: "A small business customized contact management tool for storing customer and business clients information details with PDF & spreadsheet report generation for actionable insights.",
-      image: "./assets/img/nature/bussiness analyical.png",
-      badges: ["Spring Boot", "MySQL", "React.js", "java"],
-      featured: "First Freelance Project 🎉",
-      aosDelay: 400
-    },
-  ],
-
-  volunteer: [
-    {
-      title: "General Secretary – Hayatian Computing Society",
-      organization: "University of Gujrat",
-      duration: "2024 – 2025",
-      icon: "fa-solid fa-users",
-      responsibilities: [
-        "Led 10+ academic, tech, and social events, engaging upto 400+ students.",
-        "Organized inter-departmental coding contests and seminars.",
-        "Managed logistics for hackathons, FYP expos, and programming tournaments.",
-      ],
-      borderClass: "border-primary",
-      textClass: "text-primary",
-      aosDelay: 0
-    },
-    {
-      title: "Campus Ambassador – DAIRA'25",
-      organization: "FAST NUCES CFC, Faisalabad",
-      duration: "April 2025",
-      icon: "fa-solid fa-bolt",
-      responsibilities: [
-        "Lead ambassador for UOG at national tech olympiad.",
-        "Managed 50+ member delegation's logistics, accommodation, and scheduling.",
-        "Oversaw budgeting and seamless event registration and travel.",
-      ],
-      borderClass: "border-info",
-      textClass: "text-info",
-      aosDelay: 80
-    },
-  ],
-
-  contact: [
-    // ... unchanged ...
-    {
-      type: "Email",
-      value: "zunairkhawajaa@gmail.com",
-      icon: "fas fa-envelope",
-      iconClass: "text-danger",
-      link: "mailto:zunairkhawajaa@gmail.com",
-      aosDelay: 0
-    },
-    {
-      type: "LinkedIn",
-      value: "linkedin.com/in/zunair-bin-zubair9059421a3",
-      icon: "fab fa-linkedin",
-      iconClass: "text-primary",
-      link: "https://linkedin.com/in/zunair-bin-zubair9059421a3",
-      aosDelay: 60
-    },
-  ]
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-  AOS.init({ duration: 1000, once: true, offset: 100 });
-  initNavigation();
-  initSkills();
-  initExperience();
-  initProjects();
-  initVolunteer();
-  initContact();
-  initLazyLoading();
-});
-
-function initNavigation() {
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-        document.querySelectorAll(".nav-link").forEach((a) => a.classList.remove("active"));
-        this.classList.add("active");
-      }
-    });
-  });
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    if (navbar) {
-      if (window.scrollY > 50) {
-        navbar.style.background = "rgba(255,255,255,0.96)";
-        navbar.style.backdropFilter = "blur(20px)";
-        navbar.classList.add("shadow-sm");
-      } else {
-        navbar.style.background = "rgba(15,23,42,0.92)";
-        navbar.classList.remove("shadow-sm");
-      }
-    }
-  });
-
-  const sections = document.querySelectorAll("section[id]");
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY + 150;
-    sections.forEach((section) => {
-      if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-        let sectionId = section.getAttribute("id");
-        document.querySelectorAll(".nav-link").forEach((link) => link.classList.remove("active"));
-        document.querySelector(`.nav-link[href="#${sectionId}"]`)?.classList.add("active");
-      }
-    });
-  });
-
-  window.addEventListener("scroll", function () {
-    const hero = document.querySelector(".hero");
-    if (hero) {
-      const scrollY = window.pageYOffset;
-      const translateY = scrollY * -0.25;
-      hero.style.transform = `translateY(${translateY}px)`;
-    }
-  });
-
-  setTimeout(function () {
-    const heroTitle = document.querySelector(".hero-title .gradient-text");
-    if (heroTitle) {
-      typeEffect(heroTitle, "Zunair Bin Zubair", 70);
-    }
-  }, 800);
-}
-
-function typeEffect(element, text, speed = 82) {
-  let i = 0;
-  element.textContent = "";
-  function typeWriter() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-  typeWriter();
-}
-
-function initSkills() {
-  const skillsContainer = document.getElementById("skills-container");
-  if (!skillsContainer) return;
-  portfolioData.skills.forEach((skill, index) => {
-    let iconHtml = "";
-    if (skill.type === "devicon") {
-      iconHtml = `<i class="${skill.iconClass}" style="font-size: 3rem;" aria-hidden="true"></i>`;
-    } else if (skill.type === "img") {
-      iconHtml = `<img src="${skill.iconSrc}" alt="${skill.name}" style="height: 3rem; object-fit: contain;" />`;
-    }
-    const delay = 40 * index;
-    const skillHtml = `
-      <div class="col-6 col-sm-4 col-md-2 mb-3 skill-icon" data-aos="flip-left" data-aos-delay="${delay}">
-        ${iconHtml}
-        <p class="mt-2 fw-semibold text-secondary">${skill.name}</p>
+function heroHTML(d) {
+  const h = d.hero;
+  const ctas = h.ctas.map(c =>
+    `<a href="${c.href}" class="btn btn-${c.style}">${c.label}${c.arrow ? `<span class="btn-arrow">${c.arrow === 'down' ? '↓' : '→'}</span>` : ''}</a>`
+  ).join('');
+  const stats = h.stats.map((s, i) => `
+    ${i ? '<div class="stat-divider"></div>' : ''}
+    <div class="stat">
+      <span class="stat-number" data-count="${s.count}">0</span>${s.plus ? '<span class="stat-plus">+</span>' : ''}
+      <span class="stat-label">${s.label}</span>
+    </div>`).join('');
+  return `
+  <section id="hero" class="hero">
+    <div class="hero-bg"><div class="grid-overlay"></div></div>
+    <div class="hero-content">
+      <div class="hero-avatar" data-animate="fade-up" data-delay="0">
+        <img src="${d.profile.avatar}" alt="${d.profile.name}" width="104" height="104" decoding="async">
       </div>
-    `;
-    skillsContainer.innerHTML += skillHtml;
-  });
-}
-
-function initExperience() {
-  const experienceContainer = document.getElementById("experience-container");
-  if (!experienceContainer) return;
-  portfolioData.experiences.forEach(exp => {
-    const responsibilitiesList = exp.responsibilities.map(resp => `<li>${resp}</li>`).join('');
-    const experienceCardHtml = `
-      <div class="card card-modern mb-5 p-4 text-start" data-aos="fade-up" data-aos-delay="${exp.aosDelay}">
-        <div class="d-flex align-items-center mb-2">
-          <i class="${exp.icon} fa-lg gradient-text me-2" aria-hidden="true"></i>
-          <h4 class="fw-bold mb-0">${exp.title} – ${exp.company}</h4>
-        </div>
-        <div class="mb-2 text-primary fw-semibold">${exp.duration}</div>
-        <ul class="mb-0">
-          ${responsibilitiesList}
-        </ul>
+      <div class="hero-badge" data-animate="fade-up" data-delay="80">
+        <span class="status-dot"></span> ${d.profile.status}
       </div>
-    `;
-    experienceContainer.innerHTML += experienceCardHtml;
-  });
-}
-
-function initProjects() {
-  const projectsContainer = document.getElementById("projects-container");
-  if (!projectsContainer) return;
-  projectsContainer.innerHTML = '';
-  portfolioData.projects.forEach((project, idx) => {
-    const badgesHtml = project.badges.map(badge =>
-      `<span class="badge bg-dark">${badge}</span>`
-    ).join('');
-    const featuredBadge = project.featured ?
-      `<span class="badge bg-gradient-primary position-absolute top-0 start-0 m-2 px-3 py-2" 
-             style="background: var(--gradient-primary); color: #fff; font-weight: 600;">
-        ${project.featured}
-      </span>` : '';
-    // Action Buttons (compact)
-    let actionBtns = '';
-    if (project.video && project.link) {
-      actionBtns = `
-        <div class="project-action-row mt-auto">
-          <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
-            <i class="fa fa-play-circle"></i> Demo
-          </button>
-          <a href="${project.link}" class="project-action-btn" target="_blank" rel="noopener" title="Visit Live">
-            <i class="fa fa-link"></i> Live
-          </a>
-        </div>
-      `;
-    } else if (project.video && project.concept) {
-      actionBtns = `
-        <div class="project-action-row mt-auto">
-          <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
-            <i class="fa fa-play-circle"></i> Demo
-          </button>
-          <button class="project-action-btn" data-video="${project.demo}" data-title="${project.title}" title="Project Demo">
-            <i class="fa fa-play-circle"></i> Concept
-          </button>
-        </div>
-      `;
-    }
-    else if (project.video) {
-      actionBtns = `
-        <div class="project-action-row mt-auto">
-          <button class="project-action-btn" data-video="${project.video}" data-title="${project.title}" title="Project Demo">
-            <i class="fa fa-play-circle"></i> Demo
-          </button>
-        </div>
-      `;
-    } else if (project.link) {
-      actionBtns = `
-        <div class="project-action-row mt-auto">
-          <a href="${project.link}" class="project-action-btn" target="_blank" rel="noopener" title="Visit Live">
-            <i class="fa fa-link"></i> Live
-          </a>
-        </div>
-      `;
-    }
-    const projectHtml = `
-      <div class="col" data-aos="zoom-in" data-aos-delay="${project.aosDelay || 0}">
-        <div class="card card-modern h-100 border-0 shadow-lg position-relative d-flex flex-column">
-          <div class="project-img-wrapper position-relative">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                 data-src="${project.image}" alt="${project.title}"
-                 class="img-fluid rounded-top lazyload">
-            ${featuredBadge}
-          </div>
-          <div class="card-body text-start d-flex flex-column h-91">
-            <h4 class="card-title fw-bold gradient-text mb-2">${project.title}</h4>
-            <div class="d-flex flex-wrap gap-2 mb-2">${badgesHtml}</div>
-            <p class="card-text small mb-2">${project.description}</p>
-            ${actionBtns}
-          </div>
-        </div>
-      </div>
-    `;
-    projectsContainer.innerHTML += projectHtml;
-  });
-  document.querySelectorAll('.project-action-btn[data-video]').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const videoUrl = this.getAttribute('data-video');
-      const projectTitle = this.getAttribute('data-title');
-      openVideoModal(videoUrl, projectTitle);
-    });
-  });
-}
-
-function openVideoModal(videoUrl, title) {
-  let embedUrl = '';
-  if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
-    let videoId = '';
-    if (videoUrl.includes('youtu.be/')) {
-      videoId = videoUrl.split('youtu.be/')[1].split(/[?&]/)[0];
-    } else if (videoUrl.includes('v=')) {
-      videoId = videoUrl.split('v=')[1].split('&')[0];
-    }
-    embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-  } else {
-    embedUrl = videoUrl;
-  }
-  const modalBody = document.getElementById('videoModalBody');
-  modalBody.innerHTML = `
-    <div class="ratio ratio-16x9">
-      <iframe src="${embedUrl}" 
-        frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+      <h1 class="hero-title" data-animate="fade-up" data-delay="160">
+        ${h.titleMain}<br><span class="hero-accent">${h.titleAccent}</span>
+      </h1>
+      <p class="hero-subtitle" data-animate="fade-up" data-delay="240">${h.subtitleHtml}</p>
+      <div class="hero-actions" data-animate="fade-up" data-delay="320">${ctas}</div>
+      <div class="hero-stats" data-animate="fade-up" data-delay="400">${stats}</div>
     </div>
-  `;
-  // Set project title in modal
-  document.getElementById('videoModalLabel').textContent = title || "Project Demo";
-  const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
-  videoModal.show();
-  document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
-    modalBody.innerHTML = '';
-    document.getElementById('videoModalLabel').textContent = '';
-  }, { once: true });
+    <div class="scroll-indicator" data-animate="fade-up" data-delay="600"><div class="scroll-line"></div></div>
+  </section>`;
 }
 
-function initVolunteer() {
-  const volunteerContainer = document.getElementById("volunteer-container");
-  if (!volunteerContainer) return;
-  portfolioData.volunteer.forEach(volunteer => {
-    const responsibilitiesList = volunteer.responsibilities.map(resp => `<li>${resp}</li>`).join('');
-    const volunteerHtml = `
-      <div class="card card-modern p-4 mb-5 border-start border-4 ${volunteer.borderClass} text-start" 
-           data-aos="fade-up" data-aos-delay="${volunteer.aosDelay}">
-        <div class="d-flex align-items-center mb-2">
-          <i class="${volunteer.icon} fa-lg gradient-text me-2" aria-hidden="true"></i>
-          <h4 class="fw-semibold mb-0">${volunteer.title}</h4>
+function aboutHTML(d) {
+  const a = d.about, c = a.code;
+  const details = a.details.map(x =>
+    `<div class="detail"><span class="detail-label">${x.label}</span><span class="detail-value${x.highlight ? ' highlight' : ''}">${x.value}</span></div>`
+  ).join('');
+  const stack = c.stack.map(s => `    <span class="code-string">"${s}"</span>,`).join('\n');
+  const code =
+`<span class="code-keyword">const</span> <span class="code-var">zunair</span> = {
+  <span class="code-key">role</span>: <span class="code-string">"${c.role}"</span>,
+  <span class="code-key">stack</span>: [
+${stack}
+  ],
+  <span class="code-key">currentProject</span>: {
+    <span class="code-key">name</span>: <span class="code-string">"${c.project.name}"</span>,
+    <span class="code-key">users</span>: <span class="code-number">${c.project.users}</span>,
+    <span class="code-key">platforms</span>: <span class="code-number">${c.project.platforms}</span>,
+    <span class="code-key">status</span>: <span class="code-string">"${c.project.status}"</span>,
+  },
+  <span class="code-key">superpower</span>: <span class="code-string">"${c.superpower}"</span>,
+};`;
+  return `
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-grid about-grid">
+        <div class="about-text" data-animate="fade-right">
+          <span class="section-label">${a.label}</span>
+          <h2 class="section-title">${a.titleHtml}</h2>
+          ${a.paragraphs.map(p => `<p class="about-description">${p}</p>`).join('')}
+          <div class="about-details">${details}</div>
         </div>
-        <div class="mb-2 ${volunteer.textClass} fw-semibold">${volunteer.organization} | ${volunteer.duration}</div>
-        <ul class="small ps-3 mb-0">
-          ${responsibilitiesList}
-        </ul>
-      </div>
-    `;
-    volunteerContainer.innerHTML += volunteerHtml;
-  });
-}
-
-function initContact() {
-  const contactContainer = document.getElementById("contact-container");
-  if (!contactContainer) return;
-  portfolioData.contact.forEach(contact => {
-    const contactHtml = `
-      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="${contact.aosDelay}">
-        <a href="${contact.link}" target="_blank" class="text-decoration-none text-dark">
-          <div class="card card-modern h-100 border-0 rounded-4 transition d-flex flex-row align-items-center gap-3 px-4 py-3">
-            <i class="${contact.icon} fa-2x ${contact.iconClass}" aria-hidden="true"></i>
-            <div class="text-start">
-              <h5 class="mb-1 fw-semibold">${contact.type}</h5>
-              <p class="mb-0 small">${contact.value}</p>
+        <div class="about-visual" data-animate="fade-left">
+          <div class="code-window">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">${c.filename}</span>
             </div>
+            <pre class="code-body"><code>${code}</code></pre>
           </div>
-        </a>
+        </div>
       </div>
-    `;
-    contactContainer.innerHTML += contactHtml;
-  });
+    </div>
+  </section>`;
 }
 
-function initLazyLoading() {
-  const lazyImages = document.querySelectorAll("img.lazyload");
-  const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
+function workHTML(d) {
+  const w = d.work;
+  const links = w.links.map(l =>
+    `<a href="${l.href}" target="_blank" rel="noopener" class="showcase-link"><span class="link-icon">${l.icon}</span> ${l.label}</a>`
+  ).join('');
+  const metrics = w.metrics.map(m => `
+    <div class="metric-card">
+      <div class="metric-number">${m.number}${m.plus ? '<span class="metric-plus">+</span>' : ''}</div>
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-sub">${m.sub}</div>
+    </div>`).join('');
+  const platforms = w.platforms.map(p => `
+    <div class="platform-card">
+      <div class="platform-icon">${p.icon}</div>
+      <h3 class="platform-title">${p.title}</h3>
+      <p class="platform-desc">${p.desc}</p>
+      <div class="platform-tech">${techTags(p.tech)}</div>
+    </div>`).join('');
+  return `
+  <section id="work" class="section section-dark">
+    <div class="container">
+      <span class="section-label" data-animate="fade-up">${w.label}</span>
+      <h2 class="section-title" data-animate="fade-up" data-delay="50">${w.titleHtml}</h2>
+      <p class="section-desc" data-animate="fade-up" data-delay="100">${w.descHtml}</p>
+      <div class="showcase-links" data-animate="fade-up" data-delay="150">${links}</div>
+      <div class="metrics-grid" data-animate="fade-up" data-delay="200">${metrics}</div>
+      <div class="platforms-grid" data-animate="fade-up" data-delay="250">${platforms}</div>
+    </div>
+  </section>`;
+}
+
+function skillsHTML(d) {
+  const s = d.skills;
+  const icons = s.marquee.map(m => `<i class="${m.cls}" title="${m.title}"></i>`).join('');
+  const groups = s.groups.map(g => `
+    <div class="skill-group">
+      <h3 class="skill-group-title">${g.title}</h3>
+      <div class="skill-tags">${g.tags.map(t => `<span class="skill-tag${t.primary ? ' primary' : ''}">${t.name}</span>`).join('')}</div>
+    </div>`).join('');
+  return `
+  <section id="skills" class="section">
+    <div class="container">
+      <span class="section-label" data-animate="fade-up">${s.label}</span>
+      <h2 class="section-title" data-animate="fade-up" data-delay="50">${s.titleHtml}</h2>
+    </div>
+    <div class="marquee" aria-hidden="true" data-animate="fade-up" data-delay="100">
+      <div class="marquee-track">${icons}${icons}</div>
+    </div>
+    <div class="container">
+      <div class="skills-grid" data-animate="fade-up" data-delay="100">${groups}</div>
+    </div>
+  </section>`;
+}
+
+function projectsHTML(d) {
+  const p = d.projects;
+  const cards = p.items.map(it => {
+    const actions = (it.actions || []).map(a => a.kind === 'video'
+      ? `<button class="project-link" data-video="${a.url}" data-title="${it.title} — ${a.label}">▶ ${a.label}</button>`
+      : `<a class="project-link" href="${a.url}" target="_blank" rel="noopener">↗ ${a.label}</a>`
+    ).join('');
+    return `
+    <article class="project-card">
+      <div class="project-media">
+        <img src="${it.img}" alt="${it.title} screenshot" loading="lazy" decoding="async">
+        ${it.badge ? `<span class="project-badge">${it.badge}</span>` : ''}
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <span class="project-type">${it.type}</span>
+          <span class="project-year">${it.year}</span>
+        </div>
+        <h3 class="project-title">${it.title}</h3>
+        <p class="project-desc">${it.desc}</p>
+        <div class="project-tech">${techTags(it.tech)}</div>
+        ${actions ? `<div class="project-actions">${actions}</div>` : ''}
+      </div>
+    </article>`;
+  }).join('');
+  return `
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <span class="section-label" data-animate="fade-up">${p.label}</span>
+      <h2 class="section-title" data-animate="fade-up" data-delay="50">${p.titleHtml}</h2>
+      <div class="projects-grid" data-animate="fade-up" data-delay="100">${cards}</div>
+    </div>
+  </section>`;
+}
+
+function experienceHTML(d) {
+  const e = d.experience;
+  const items = e.items.map(it => `
+    <div class="timeline-item">
+      <div class="timeline-marker${it.active ? ' active' : ''}"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div>
+            <h3 class="timeline-title">${it.title}</h3>
+            <span class="timeline-company">${it.company}</span>
+          </div>
+          <span class="timeline-date">${it.date}</span>
+        </div>
+        <ul class="timeline-bullets">${bullets(it.bullets)}</ul>
+      </div>
+    </div>`).join('');
+  return `
+  <section id="experience" class="section">
+    <div class="container">
+      <span class="section-label" data-animate="fade-up">${e.label}</span>
+      <h2 class="section-title" data-animate="fade-up" data-delay="50">${e.titleHtml}</h2>
+      <div class="timeline" data-animate="fade-up" data-delay="100">${items}</div>
+    </div>
+  </section>`;
+}
+
+function leadershipHTML(d) {
+  const l = d.leadership;
+  const cards = l.items.map(it => `
+    <div class="leadership-card">
+      <div class="leadership-icon">${it.icon}</div>
+      <h3 class="leadership-title">${it.title}</h3>
+      <span class="leadership-org">${it.org}</span>
+      <span class="leadership-date">${it.date}</span>
+      <ul class="leadership-bullets">${bullets(it.bullets)}</ul>
+    </div>`).join('');
+  return `
+  <section id="leadership" class="section section-dark">
+    <div class="container">
+      <span class="section-label" data-animate="fade-up">${l.label}</span>
+      <h2 class="section-title" data-animate="fade-up" data-delay="50">${l.titleHtml}</h2>
+      <p class="section-desc" data-animate="fade-up" data-delay="100">${l.descHtml}</p>
+      <div class="leadership-grid" data-animate="fade-up" data-delay="150">${cards}</div>
+    </div>
+  </section>`;
+}
+
+function contactHTML(d) {
+  const c = d.contact;
+  const cards = c.cards.map(x =>
+    `<a href="${x.href}"${x.external ? ' target="_blank" rel="noopener"' : ''} class="contact-card">
+      <span class="contact-icon">${x.icon}</span>
+      <span class="contact-type">${x.type}</span>
+      <span class="contact-value">${x.value}</span>
+    </a>`).join('');
+  return `
+  <section id="contact" class="section section-dark">
+    <div class="container contact-container">
+      <span class="section-label" data-animate="fade-up">${c.label}</span>
+      <h2 class="section-title contact-title" data-animate="fade-up" data-delay="50">${c.titleHtml}</h2>
+      <p class="section-desc" data-animate="fade-up" data-delay="100">${c.descHtml}</p>
+      <div class="contact-grid" data-animate="fade-up" data-delay="150">${cards}</div>
+      <div class="contact-cta" data-animate="fade-up" data-delay="200">
+        <a href="${c.cta.href}" class="btn btn-primary btn-lg">${c.cta.label} <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>`;
+}
+
+function render(d) {
+  document.getElementById('navLogo').innerHTML = d.profile.brandHtml;
+  document.getElementById('navLinks').innerHTML = d.nav.map(n => `<a href="${n.href}" class="nav-link">${n.label}</a>`).join('');
+  document.getElementById('app').innerHTML =
+    heroHTML(d) + aboutHTML(d) + workHTML(d) + skillsHTML(d) + projectsHTML(d) + experienceHTML(d) + leadershipHTML(d) + contactHTML(d);
+  document.getElementById('footer').innerHTML =
+    `<span class="footer-brand">${d.profile.brandHtml}</span>
+     <span class="footer-copy">${d.footer.copy}</span>
+     <div class="footer-links">${d.footer.links.map(l => `<a href="${l.href}"${l.external ? ' target="_blank" rel="noopener"' : ''}>${l.label}</a>`).join('')}</div>`;
+}
+
+// ─── Interactions (attached after render so they see the real nodes) ───
+function ytEmbed(url) {
+  let id = '';
+  if (url.includes('youtu.be/')) id = url.split('youtu.be/')[1].split(/[?&]/)[0];
+  else if (url.includes('v=')) id = url.split('v=')[1].split('&')[0];
+  return id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : url;
+}
+
+function init() {
+  // scroll-in animations
+  const animObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const image = entry.target;
-        const imageUrl = image.dataset.src;
-        if (imageUrl) {
-          image.src = imageUrl;
-          image.onload = () => {
-            image.classList.remove("lazyload");
-          };
-        }
-        observer.unobserve(image);
+        setTimeout(() => entry.target.classList.add('visible'), Number(entry.target.dataset.delay || 0));
+        animObserver.unobserve(entry.target);
       }
     });
-  }, observerOptions);
-  lazyImages.forEach((image) => {
-    imageObserver.observe(image);
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-animate]').forEach(el => animObserver.observe(el));
+
+  // counters
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target, target = Number(el.dataset.count), start = performance.now();
+      (function update(now) {
+        const p = Math.min((now - start) / 2000, 1);
+        el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target).toLocaleString();
+        if (p < 1) requestAnimationFrame(update);
+      })(start);
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  // nav: shrink-on-scroll + active link (single scroll handler)
+  const nav = document.getElementById('nav');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('#navLinks .nav-link');
+  window.addEventListener('scroll', () => {
+    const y = window.pageYOffset;
+    nav.classList.toggle('scrolled', y > 50);
+    let current = '';
+    sections.forEach(s => { if (y >= s.offsetTop - 120) current = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  }, { passive: true });
+
+  // mobile menu
+  const navToggle = document.getElementById('navToggle');
+  const navLinksWrap = document.getElementById('navLinks');
+  const setMenu = open => {
+    navToggle.classList.toggle('active', open);
+    navLinksWrap.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  navToggle.addEventListener('click', () => setMenu(!navLinksWrap.classList.contains('open')));
+
+  // smooth scroll + close menu on nav click
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      setMenu(false);
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
+    });
   });
+
+  // cursor glow (desktop only)
+  const glow = document.getElementById('cursorGlow');
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+      glow.classList.add('active');
+    });
+    document.addEventListener('mouseleave', () => glow.classList.remove('active'));
+  }
+
+  // project demo modal (iframe injected only on open)
+  const modal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  const close = () => { modal.hidden = true; modalVideo.innerHTML = ''; document.body.style.overflow = ''; };
+  document.querySelectorAll('.project-link[data-video]').forEach(btn => btn.addEventListener('click', () => {
+    modalVideo.innerHTML = `<iframe src="${ytEmbed(btn.dataset.video)}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }));
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) close(); });
+}
+
+render(DATA); // DATA comes from data.js, loaded just before this script
+init();
+
+// self-check (gated): verify the YouTube id parser — open any page with ?selftest
+if (location.search.includes('selftest')) {
+  console.assert(ytEmbed('https://youtu.be/abc123?si=x').includes('/embed/abc123'), 'youtu.be parse');
+  console.assert(ytEmbed('https://www.youtube.com/watch?v=xyz789&t=2').includes('/embed/xyz789'), 'watch?v parse');
+  console.log('selftest ok');
 }
